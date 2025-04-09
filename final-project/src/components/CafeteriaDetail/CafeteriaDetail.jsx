@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { cardsinfo } from '../../data/data';
+import './CafeteriaDetail.css';
 
 function CafeteriaDetail() {
   const { id } = useParams();
@@ -12,7 +13,6 @@ function CafeteriaDetail() {
   return (
     <div className="cafeteria-detail">
       <h1>{cafeteria.title}</h1>
-      <img src={cafeteria.image} alt={cafeteria.title} className="cafeteria-image" />
       
       <h2>Menú</h2>
       <div className="menu-section">
