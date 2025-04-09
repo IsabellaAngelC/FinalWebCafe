@@ -2,7 +2,7 @@
   background-color: #713001;
   color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 5px ;
   font-family: Arial, sans-serif;
   width: 100%;
   z-index: 1000;
@@ -16,7 +16,8 @@
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
+    padding-top: 5px;
   }
   
   .footer-nav a {

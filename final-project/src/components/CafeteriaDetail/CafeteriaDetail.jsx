@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom';
+import { cardsinfo } from '../../data/data';
 import Navbar from '../navbar/NavBar';
 import Footer from '../footer/Footer';
-import { cardsinfo } from '../../data/data';
-import './CafeteriaDetail.css';
+import './CafeteriaDetail.css'; // Asegúrate de usar el CSS que te proporcioné antes
 
 function CafeteriaDetail() {
   const { id } = useParams();
@@ -13,53 +13,35 @@ function CafeteriaDetail() {
   }
 
   return (
-<div className='container'> 
-<Navbar /> 
-
+<div className='container'>
+    <Navbar />
     <div className="cafeteria-detail">
-       
-      <h1>{cafeteria.title}</h1>
+      <h1 className="cafeteria-title">{cafeteria.title}</h1>
       
-      <h2>Menú</h2>
       <div className="menu-section">
-        
-        <div className="item-card">
-
-{cafeteria.menu.lunchItems.map(item => (
+        {cafeteria.menu.lunchItems.map(item => (
           <div key={item.id} className="menu-item">
-            <h4>{item.type}</h4>
-            <p>{item.description}</p>
-            <span className="price">{item.price}</span>
-
-
-       </div>
+            <h2 className="item-type">{item.type}</h2>
+            <p className="item-description">{item.description}</p>
+            <div className="item-footer">
+              <span className="item-price">{item.price}</span>
+              <button className="buy-button">Comprar</button>
+            </div>
+          </div>
         ))}
-
-
-        </div>
-        <div className="item-card">
-
-<div className="extras-section">
-        <h3>Extras</h3>
-        <ul>
-          {cafeteria.menu.extras.map(extra => (
-            <li key={extra.id}>{extra.name}</li>
-          ))}
-        </ul>
-    </div>
-
-            
-        </div>
-
-        
-
-
-    
-
       </div>
       
-      
-    
+      <div className="extras-section">
+        <h2 className="extras-title">Extras</h2>
+        <div className="extras-grid">
+          {cafeteria.menu.extras.map(extra => (
+            <div key={extra.id} className="extra-item">
+              <span>{extra.name}</span>
+              <button className="buy-button small">+</button>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
     <Footer />
     </div>
