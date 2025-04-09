@@ -23,8 +23,9 @@ function CafeteriaDetail() {
       <h2>Menú</h2>
       <div className="menu-section">
         
+        <div className="item-card">
 
-        {cafeteria.menu.lunchItems.map(item => (
+{cafeteria.menu.lunchItems.map(item => (
           <div key={item.id} className="menu-item">
             <h4>{item.type}</h4>
             <p>{item.description}</p>
@@ -34,7 +35,11 @@ function CafeteriaDetail() {
        </div>
         ))}
 
-    <div className="extras-section">
+
+        </div>
+        <div className="item-card">
+
+<div className="extras-section">
         <h3>Extras</h3>
         <ul>
           {cafeteria.menu.extras.map(extra => (
@@ -42,6 +47,14 @@ function CafeteriaDetail() {
           ))}
         </ul>
     </div>
+
+            
+        </div>
+
+        
+
+
+    
 
       </div>
       
