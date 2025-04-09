@@ -3,15 +3,15 @@ import { cardsinfo } from "../../data/data";
 import "./CardsHome.css";
 
 function Cards() {
-    const navigate = useNavigate();
-    
-    return (
-      <div className="latest-updates"> 
-        <div className="two-top">
-            <h2 className="title">Cafeterías Disponibles</h2>
-        </div>
+  const navigate = useNavigate();
+  
+  return (
+    <div className="latest-updates"> 
+      <div className="two-top">
+        <h2 className="title">Cafeterías Disponibles</h2>
+      </div>
 
-        <div className="cards-container">
+      <div className="cards-container">
         {cardsinfo.map((card) => (
           <div 
             key={card.id} 
@@ -24,9 +24,9 @@ function Cards() {
             </div>
           </div>
         ))}
-        </div>
       </div>
-    );
+    </div>
+  );
 }
 
 export default Cards;
