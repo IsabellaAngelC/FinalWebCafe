@@ -1,4 +1,6 @@
 import { useParams } from 'react-router-dom';
+import Navbar from '../navbar/NavBar';
+import Footer from '../footer/Footer';
 import { cardsinfo } from '../../data/data';
 import './CafeteriaDetail.css';
 
@@ -11,6 +13,7 @@ function CafeteriaDetail() {
   }
 
   return (
+
     <div className="cafeteria-detail">
       <h1>{cafeteria.title}</h1>
       
