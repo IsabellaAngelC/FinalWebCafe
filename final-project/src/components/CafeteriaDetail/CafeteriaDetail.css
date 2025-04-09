@@ -23,6 +23,11 @@
   .menu-item {
     margin-bottom: 25px;
   }
+
+  .menu-section {
+    display: flex;
+    flex-direction: row;
+  }
   
   .item-type {
     font-size: 1.4rem;

@@ -13,30 +13,42 @@ function CafeteriaDetail() {
   }
 
   return (
+<div className='container'> 
+<Navbar /> 
 
     <div className="cafeteria-detail">
+       
       <h1>{cafeteria.title}</h1>
       
       <h2>Menú</h2>
       <div className="menu-section">
-        <h3>Almuerzos</h3>
+        
+
         {cafeteria.menu.lunchItems.map(item => (
           <div key={item.id} className="menu-item">
             <h4>{item.type}</h4>
             <p>{item.description}</p>
             <span className="price">{item.price}</span>
-          </div>
+
+
+       </div>
         ))}
-      </div>
-      
-      <div className="extras-section">
+
+    <div className="extras-section">
         <h3>Extras</h3>
         <ul>
           {cafeteria.menu.extras.map(extra => (
             <li key={extra.id}>{extra.name}</li>
           ))}
         </ul>
+    </div>
+
       </div>
+      
+      
+    
+    </div>
+    <Footer />
     </div>
   );
 }
