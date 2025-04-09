@@ -1,0 +1,54 @@
+.cafeteria-detail {
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .menu-section {
+    margin-bottom: 30px;
+  }
+  
+  .menu-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .item-type {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .item-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  .item-price {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .extras-section {
+    margin-top: 30px;
+  }
+  
+  .extras-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .extras-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .extra-item {
+    background-color: #f0f0f0;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
