@@ -3,6 +3,14 @@ body{
     color: white;
 }
 
+.home-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
 .cafeterias{
     height: 500px;
     margin: 43px;

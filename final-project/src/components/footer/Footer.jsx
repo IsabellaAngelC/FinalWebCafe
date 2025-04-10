@@ -11,9 +11,7 @@ const Footer = () => {
         <a href="#">Ayuda</a>
       </nav>
 
-      <div className="footer-logo">
-        <img src="https://www.icesi.edu.co/calipostalessonoras/images/logo_icesi-01.png" alt="Bites Logo" />
-      </div>
+      
 
       <p className="copyright">
         Copyright © COGNOSPHERE. All Rights Reserved.

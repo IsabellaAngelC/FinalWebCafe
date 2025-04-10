@@ -13,6 +13,7 @@ function Navbar (){
             <a href="/home">Home</a>
             <a href="/about">Mis pedidos</a>
             <a href="https://www.icesi.edu.co/servicios/contactenos/">Ayuda</a>
+            <a href="/">Mi perfil</a>
           </div>
         </div>
       </nav>
