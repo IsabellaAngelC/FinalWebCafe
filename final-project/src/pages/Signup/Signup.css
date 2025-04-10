@@ -90,7 +90,7 @@ input{
   .login-link {
     margin-top: 1.5rem;
     text-align: center;
-    color: #4C2400;
+    color: rgb(54, 110, 199);
   }
   
   .login-link a {
@@ -111,4 +111,8 @@ input{
     .signup-form {
       padding: 1.5rem;
     }
+  }
+
+  .si-account{
+    color: #4C2400;
   }

@@ -15,7 +15,7 @@ const Signup = () => {
 
   return (
     <div className='signup-container'>
-      <h1>Signup Now</h1>
+      <h1>Sign up Now</h1>
    
 
     <form onSubmit={handleSubmit} className = "signup-form">
@@ -46,7 +46,7 @@ const Signup = () => {
     </form> 
 
     <div className='signup-link'>
-  <p>Already have an account? <span className='login-link' onClick={() => navigate('/')}>Login now</span></p>  
+  <p className='si-account'>Already have an account? <span className='login-link' onClick={() => navigate('/')}>Login now</span></p>  
 </div>
 
     </div>
