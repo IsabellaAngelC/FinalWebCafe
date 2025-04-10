@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Login from '../Login/Login';
 import './Profile.css'; // Archivo de estilos
 
 const Profile = () => {
