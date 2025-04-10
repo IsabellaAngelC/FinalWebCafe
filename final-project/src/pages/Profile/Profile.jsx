@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../../components/navbar/NavBar';
+import Footer from '../../components/footer/Footer';
 import './Profile.css'; // Archivo de estilos
 
 const Profile = () => {
@@ -27,6 +29,7 @@ const Profile = () => {
   if (!userData) {
     return (
       <div className="profile-container">
+        <Navbar />
         <h1 className="not-logged-title">No hay una cuenta logueada</h1>
         <div className="auth-options">
           <p>Por favor inicia sesión o regístrate para acceder a tu perfil</p>
@@ -45,6 +48,7 @@ const Profile = () => {
             </button>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }
@@ -81,6 +85,7 @@ const Profile = () => {
           Cerrar sesión
         </button>
       </div>
+      <Footer />
     </div>
   );
 };
