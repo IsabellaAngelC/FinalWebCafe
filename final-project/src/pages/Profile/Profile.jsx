@@ -4,6 +4,7 @@ import './Profile.css'; // Archivo de estilos
 
 const Profile = () => {
   const [userData, setUserData] = useState(null);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -11,7 +12,10 @@ const Profile = () => {
     const data = localStorage.getItem('userData');
     if (data) {
       setUserData(JSON.parse(data));
-    } else {
+    }
+    setLoading(false);
+    
+    else {
       // Redirigir si no hay datos de usuario
       navigate('/login');
     }
