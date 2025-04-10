@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Perfil.css'; // Archivo de estilos
+import './Profile.css'; // Archivo de estilos
 
 const Profile = () => {
   const [userData, setUserData] = useState(null);

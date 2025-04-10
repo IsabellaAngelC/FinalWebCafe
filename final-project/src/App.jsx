@@ -3,7 +3,7 @@ import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
 import Home from './pages/Home/Home';
 import CafeteriaDetail from './components/CafeteriaDetail/CafeteriaDetail';
-import Profile from './pages/Perfil/Perfil';
+import Profile from './pages/Profile/Profile';
 
 function App() {
   return (
