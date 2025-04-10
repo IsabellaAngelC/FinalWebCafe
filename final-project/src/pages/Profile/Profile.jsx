@@ -32,7 +32,7 @@ const Profile = () => {
           <p>Por favor inicia sesión o regístrate para acceder a tu perfil</p>
           <div className="auth-buttons">
             <button 
-              onClick={() => navigate('/login')}
+              onClick={() => navigate('/')}
               className="auth-button login-button"
             >
               Iniciar sesión
