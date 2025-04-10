@@ -13,6 +13,11 @@ const Login = () => {
     e.preventDefault();
     //aqui checo a ver si se envió esta wea
     console.log('datos enviados:', {username, password, rememberMe});
+
+    if (rememberMe) {
+      localStorage.setItem('userData', JSON.stringify({username, password}));
+    }
+    navigate('/home');
   };
 
 
