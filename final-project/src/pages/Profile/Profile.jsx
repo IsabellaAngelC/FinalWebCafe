@@ -8,27 +8,45 @@ const Profile = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Obtener datos del localStorage al cargar el componente
     const data = localStorage.getItem('userData');
     if (data) {
       setUserData(JSON.parse(data));
     }
     setLoading(false);
-    
-    else {
-      // Redirigir si no hay datos de usuario
-      navigate('/login');
-    }
-  }, [navigate]);
+  }, []);
 
   const handleLogout = () => {
-    // Limpiar localStorage y redirigir
     localStorage.removeItem('userData');
-    navigate('/login');
+    setUserData(null);
   };
 
+  if (loading) {
+    return <div className="profile-container">Loading...</div>;
+  }
+
   if (!userData) {
-    return <div>Loading...</div>; // O algún spinner
+    return (
+      <div className="profile-container">
+        <h1 className="not-logged-title">No hay una cuenta logueada</h1>
+        <div className="auth-options">
+          <p>Por favor inicia sesión o regístrate para acceder a tu perfil</p>
+          <div className="auth-buttons">
+            <button 
+              onClick={() => navigate('/login')}
+              className="auth-button login-button"
+            >
+              Iniciar sesión
+            </button>
+            <button 
+              onClick={() => navigate('/signup')}
+              className="auth-button signup-button"
+            >
+              Registrarse
+            </button>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (
