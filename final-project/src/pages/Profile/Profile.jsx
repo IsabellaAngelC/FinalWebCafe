@@ -28,7 +28,7 @@ const Profile = () => {
 
   if (!userData) {
     return (
-      <div className="profile-container">
+      <div className="container">
         <Navbar />
         <h1 className="not-logged-title">No hay una cuenta logueada</h1>
         <div className="auth-options">
@@ -54,7 +54,8 @@ const Profile = () => {
   }
 
   return (
-    <div className="profile-container">
+    <div className="container">
+      <Navbar />
       <h1>Mi Perfil</h1>
       
       <div className="profile-card">
