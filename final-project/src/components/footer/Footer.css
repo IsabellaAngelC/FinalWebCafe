@@ -6,8 +6,8 @@
   font-family: Arial, sans-serif;
   width: 100%;
   z-index: 1000;
-  position: fixed; /* Cambia relative por fixed */
-  bottom: 0; /* Lo fija en la parte inferior */
+  position: fixed; 
+  bottom: 0; 
   left: 0;
 }
   

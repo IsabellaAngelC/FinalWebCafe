@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { cardsinfo } from '../../data/data';
 import Navbar from '../navbar/NavBar';
 import Footer from '../footer/Footer';
-import './CafeteriaDetail.css'; // Asegúrate de usar el CSS que te proporcioné antes
+import './CafeteriaDetail.css'; 
 
 function CafeteriaDetail() {
   const { id } = useParams();

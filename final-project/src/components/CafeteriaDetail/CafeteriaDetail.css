@@ -28,7 +28,6 @@
     padding-bottom: 10px;
   }
   
-  /* Estilo para items de menú */
   .menu-item {
     margin-bottom: 25px;
   }
@@ -60,7 +59,7 @@
     margin-top: 5px;
   }
   
-  /* Sección de extras */
+  
   .extras-section {
     margin-top: 40px;
   }
@@ -86,7 +85,7 @@
     font-size: 0.9rem;
   }
   
-  /* Estilo para la pregunta "¿Qué vas a comer hoy?" */
+  
   .menu-question {
     font-style: italic;
     color: #666;
@@ -95,7 +94,7 @@
     font-size: 1.1rem;
   }
   
-  /* Pequeños ajustes para móviles */
+
   @media (max-width: 768px) {
     .cafeteria-detail {
       padding: 15px;
@@ -108,7 +107,7 @@
   
 
 
-/* Estilo específico para items de menú */
+
 .menu-item {
     margin-bottom: 30px;
     padding: 20px;
@@ -129,7 +128,7 @@
     color: #555;
     line-height: 1.5;
     margin-bottom: 15px;
-    white-space: pre-line; /* Respeta los saltos de línea */
+    white-space: pre-line; 
   }
   
   .item-footer {
@@ -167,7 +166,7 @@
     margin-left: 10px;
   }
   
-  /* Estilo para extras */
+  
   .extras-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));

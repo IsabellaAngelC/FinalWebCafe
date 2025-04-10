@@ -1,4 +1,4 @@
-//localStorage.setItem('isAuth', false);
+
 
 
 export const isAuthenticated = () => {

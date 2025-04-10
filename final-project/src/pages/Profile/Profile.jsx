@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/navbar/NavBar';
 import Footer from '../../components/footer/Footer';
-import './Profile.css'; // Archivo de estilos
+import './Profile.css'; 
 
 const Profile = () => {
   const [userData, setUserData] = useState(null);
@@ -72,7 +72,7 @@ const Profile = () => {
             <span className="detail-value">{userData.username}</span>
           </div>
           
-          {/* No muestres la contraseña en producción */}
+          
           <div className="detail-item">
             <span className="detail-label">Contraseña:</span>
             <span className="detail-value">••••••••</span>
