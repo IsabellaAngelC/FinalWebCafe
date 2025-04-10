@@ -11,7 +11,7 @@ function Navbar (){
           
           <div className="navbar-links">
             <a href="/home">Home</a>
-            <a href="/about">Mis pedidos</a>
+            <a href="/mispedidos">Mis pedidos</a>
             <a href="https://www.icesi.edu.co/servicios/contactenos/">Ayuda</a>
             <a href="/profile">Mi perfil</a>
           </div>

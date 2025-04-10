@@ -4,6 +4,7 @@ import Signup from './pages/Signup/Signup';
 import Home from './pages/Home/Home';
 import CafeteriaDetail from './components/CafeteriaDetail/CafeteriaDetail';
 import Profile from './pages/Profile/Profile';
+import MisPedidos from './pages/MisPedidos/MisPedidos';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/cafeteria/:id" element={<CafeteriaDetail />} />
 		<Route path="/profile" element={<Profile />} />
+		<Route path="/mispedidos" element={<MisPedidos />} />
       </Routes>
     </BrowserRouter>
   );
