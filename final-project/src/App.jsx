@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
-import Home from './pages/Home/Home';
+import Home from './pages/Paginas Estudiante/Home/Home';
 import CafeteriaDetail from './components/CafeteriaDetail/CafeteriaDetail';
 import Profile from './pages/Profile/Profile';
-import Form from './pages/PedidoForm/Form';
-import MisPedidos from './pages/MisPedidos/MisPedidos';
-import HomeAdmin from './pages/HomeAdmin/HomeAdmin';
+import Form from './pages/Paginas Estudiante/PedidoForm/Form';
+import MisPedidos from './pages/Paginas Estudiante/MisPedidos/MisPedidos';
+import HomeAdmin from './pages/Paginas administrador/HomeAdmin/HomeAdmin';
 
 function App() {
   return (

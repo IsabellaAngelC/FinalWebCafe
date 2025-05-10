@@ -1,0 +1,38 @@
+.home-admin-container{
+    margin-top: 60px; /* Igual a la altura de la navbar */
+    padding: 20px;
+}
+
+.publish-button {
+  background-color: #713001;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.publish-button:hover {
+  background-color: #925a1a;
+}
+
+.menu-posts {
+  margin-top: 20px;
+}
+
+.menu-post {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.menu-post h3 {
+  margin: 0 0 10px;
+}
+
+.menu-post p {
+  margin: 5px 0;
+}

@@ -1,42 +1,57 @@
 .navbar {
-    background-color: #713001;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 10px;
-    padding-top: 10px;
-    position: fixed;
-    width: 100%;
-    height: 40px;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .navbar-logo img {
-    height: 35px;
-    width: auto;
+  background-color: #713001; /* Color marrón */
+  color: white;
+  position: fixed; /* Fija la navbar en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+  height: 60px; /* Altura fija */
+  z-index: 1000; /* Asegura que esté por encima del contenido */
+  display: flex; /* Flexbox para alinear contenido */
+  justify-content: space-between; /* Espaciado entre logo y enlaces */
+  align-items: center; /* Centra verticalmente los elementos */
+  padding: 0 20px; /* Espaciado interno */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para separación */
+  font-family: Arial, sans-serif; /* Fuente consistente */
+}
 
-  }
+.navbar-container {
+  display: flex; /* Flexbox para organizar elementos horizontalmente */
+  justify-content: space-between; /* Espaciado entre logo y enlaces */
+  align-items: center; /* Centra verticalmente los elementos */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+   padding: 0 20px; /* Espaciado interno opcional */
+  box-sizing: border-box; 
+  max-width: 1200px; /* Opcional: limita el ancho máximo */
+}
+
+.navbar-logo {
+  display: flex; /* Asegura que el logo esté alineado horizontalmente */
+  align-items: center;/* Centra verticalmente el logo */
+}
+
+.navbar-logo img {
+  height: 40px; /* Tamaño del logo */
+  width: auto;
   
-  .navbar-links {
-    display: flex;
-    gap: 2rem;
-  }
-  
-  .navbar-links a {
-    text-decoration: none;
-    color: #f2f2f2;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar-links a:hover {
-    color: #007bff;
-  }
-  
+}
+
+.navbar-links {
+  display: flex; /* Flexbox para los enlaces */
+  flex-direction: row; /* Asegura que los enlaces estén en una fila horizontal */
+  gap: 25px; /* Espaciado entre enlaces */
+  align-items: center;
+  margin-left: auto; /* Centra verticalmente los enlaces */
+}
+
+.navbar-links a {
+  text-decoration: none; /* Sin subrayado */
+  color: white; /* Color del texto */
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: 500; /* Peso de fuente */
+  transition: color 0.3s ease; /* Transición suave al pasar el cursor */
+}
+
+.navbar-links a:hover {
+  color: #efb076; /* Color al pasar el cursor (similar al footer) */
+}
