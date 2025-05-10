@@ -6,6 +6,7 @@ import CafeteriaDetail from './components/CafeteriaDetail/CafeteriaDetail';
 import Profile from './pages/Profile/Profile';
 import Form from './pages/PedidoForm/Form';
 import MisPedidos from './pages/MisPedidos/MisPedidos';
+import HomeAdmin from './pages/HomeAdmin/HomeAdmin';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/home-admin" element={<HomeAdmin />} />
         <Route path="/cafeteria/:id" element={<CafeteriaDetail />} />
 		    <Route path="/profile" element={<Profile />} />
         <Route path="/nuevo-pedido" element={<Form />} />

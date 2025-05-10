@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
-import Navbar from '../../components/navbar/NavBar';
-import Footer from '../../components/footer/Footer';
+import Navbar from '../../../components/navbar/NavBar';
+import Footer from '../../../components/footer/Footer';
 import './MisPedidos.css'
 
 const MisPedidos = () => {

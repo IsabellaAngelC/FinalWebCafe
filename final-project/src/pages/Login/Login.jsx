@@ -1,78 +1,101 @@
-import './Login.css'
-import React, { useState } from 'react';
+import './Login.css';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { doc, getDoc } from 'firebase/firestore';
+import { auth, db } from '../../services/firebaseConfig';
 
 const Login = () => {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (rememberMe) {
-      localStorage.setItem('userData', JSON.stringify({username, password}));
+    try {
+      // Iniciar sesión con Firebase Authentication
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+
+      // Verificar si el usuario existe en Firestore
+      const userDoc = await getDoc(doc(db, 'users', user.uid));
+      if (!userDoc.exists()) {
+        alert('Usuario no encontrado');
+        return;
+      }
+
+      // Guardar datos en localStorage si "Remember Me" está activado
+      if (rememberMe) {
+        localStorage.setItem('userData', JSON.stringify({ email, password }));
+      }
+
+      // Redirigir según el dominio del correo
+      if (email.endsWith('@icesi.edu.co')) {
+        navigate('/home-admin'); // Página de administrador
+      } else {
+        navigate('/home'); // Página de usuario normal
+      }
+    } catch (err) {
+      console.error('Error al iniciar sesión:', err.message);
+      setError('Credenciales incorrectas. Por favor, verifica tu email y contraseña.');
     }
-    navigate('/home');
   };
 
+  return (
+    <div className="login-container">
+      <h1>Login Now</h1>
 
-    return (
-      <div className='login-container'>
-        <h1>Login Now</h1>
-
-
-
-        <form onSubmit={handleSubmit} className = "login-form">
-          <div className='form-group'>
-            <h2>Username</h2>
-            <input
-            type="text"
-            placeholder='Ingresa tu usuario'
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+      <form onSubmit={handleSubmit} className="login-form">
+        <div className="form-group">
+          <h2>Email</h2>
+          <input
+            type="email"
+            placeholder="Ingresa tu email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
-            />
-          </div>
+          />
+        </div>
 
-          <div className='form-group'>
-            <h2>Password</h2>
-            <input
+        <div className="form-group">
+          <h2>Password</h2>
+          <input
             type="password"
-            placeholder='Ingresa tu contraseña'
+            placeholder="Ingresa tu contraseña"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            />
-            </div>
+          />
+        </div>
 
+        <div className="remember-me">
+          <input
+            type="checkbox"
+            id="remember"
+            checked={rememberMe}
+            onChange={(e) => setRememberMe(e.target.checked)}
+          />
+          <label htmlFor="remember">Remember me</label>
+        </div>
 
-            <div className='remember-me'>
-              <input
-              type="checkbox"
-              id='remember'
-              checked={rememberMe}
-              onChange={(e) => setRememberMe(e.target.checked)}
-              />
-              <label htmlFor='remember-me'>Remember me</label>
-              </div>
+        {error && <p className="error-message">{error}</p>}
 
-             
-              <div className='divider'></div>
+        <button type="submit" className="login-button">Login</button>
+      </form>
 
-              <button type="submit" className='login-button' onClick={() => navigate('./home')}>Login</button>
-        </form>
-
-
-<div className='signup-link'>
-  <p className='no-account'>Don't have an account? <span className='signup-link' onClick={() => navigate('/signup')}>Sign up now</span></p>  
-</div>
-
- 
+      <div className="signup-link">
+        <p className="no-account">
+          Don't have an account?{' '}
+          <span className="signup-link" onClick={() => navigate('/signup')}>
+            Sign up now
+          </span>
+        </p>
       </div>
-    );
+    </div>
+  );
 };
-  
-export default Login; 
+
+export default Login;

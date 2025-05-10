@@ -1,8 +1,8 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { agregarPedido } from '../../redux/pedidosSlice';
-import Navbar from '../../components/navbar/NavBar';
-import Footer from '../../components/footer/Footer';
+import { agregarPedido } from '../../../redux/pedidosSlice';
+import Navbar from '../../../components/navbar/NavBar';
+import Footer from '../../../components/footer/Footer';
 import './Form.css';
 
 function Form() {
