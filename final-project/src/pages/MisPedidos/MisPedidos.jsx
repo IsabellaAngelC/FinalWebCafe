@@ -1,10 +1,19 @@
 import { useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
 import Navbar from '../../components/navbar/NavBar';
 import Footer from '../../components/footer/Footer';
 import './MisPedidos.css'
 
 const MisPedidos = () => {
-    const pedidos = useSelector((state) => state.pedidos);
+    const pedidosRedux = useSelector((state) => state.pedidos);
+    const [pedidos, setPedidos] = useState([]);
+
+    useEffect(() => {
+        // Combinar pedidos del estado global y localStorage
+        const pedidosGuardados = JSON.parse(localStorage.getItem('pedidos')) || [];
+        setPedidos([...pedidosRedux, ...pedidosGuardados]);
+      }, [pedidosRedux]); // Escucha cambios en pedidosRedux
+    
     return (
         <div className="container">
       <Navbar />
@@ -16,6 +25,13 @@ const MisPedidos = () => {
               <h2>{pedido.type}</h2>
               <p>Estudiante: {pedido.estudiante}</p>
               <p>Método de pago: {pedido.metodoPago}</p>
+              {pedido.comprobante && (
+                <img
+                  src={pedido.comprobante}
+                  alt="Comprobante"
+                  className="pedido-imagen"
+                />
+              )}
             </div>
           ))
         ) : (

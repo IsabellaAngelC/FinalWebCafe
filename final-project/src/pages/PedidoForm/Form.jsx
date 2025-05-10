@@ -16,18 +16,25 @@ function Form() {
 
     // Crear el pedido con los detalles adicionales
     const nuevoPedido = {
-      ...pedido,
-      estudiante: e.target.estudiante.value,
-      metodoPago: e.target.metodoPago.value,
-      comprobante: e.target.comprobante.files[0], // Archivo subido
-    };
+        ...pedido,
+        estudiante: e.target.estudiante.value,
+        metodoPago: e.target.metodoPago.value,
+        comprobante: e.target.comprobante.files[0]
+          ? URL.createObjectURL(e.target.comprobante.files[0]) // Convertir archivo a URL
+          : null,
+      };
 
     // Agregar el pedido al estado global
     dispatch(agregarPedido(nuevoPedido));
 
-    // Redirigir a la página de "Mis Pedidos"
-    navigate('/mispedidos');
-  };
+  const pedidosGuardados = JSON.parse(localStorage.getItem('pedidos')) || [];
+  pedidosGuardados.push(nuevoPedido);
+  localStorage.setItem('pedidos', JSON.stringify(pedidosGuardados));
+
+  // Redirigir a la página de "Mis Pedidos"
+  navigate('/mispedidos');
+  window.location.reload(); // Forzar recarga
+};
 
   return (
    
