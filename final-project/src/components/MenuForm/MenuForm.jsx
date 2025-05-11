@@ -3,7 +3,7 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../services/firebaseConfig";
 import "./MenuForm.css";
 
-const MenuForm = ({ user, fetchMenus }) => {
+const MenuForm = ({ user }) => {
   const [menuName, setMenuName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
@@ -14,10 +14,10 @@ const MenuForm = ({ user, fetchMenus }) => {
     try {
       const menusRef = collection(db, "menus");
       await addDoc(menusRef, {
-        username: user.username,
         menuName,
         description,
         price,
+        username: user.username, // Se asegura de guardar el nombre del usuario actual
         createdAt: new Date(),
       });
 
@@ -25,7 +25,6 @@ const MenuForm = ({ user, fetchMenus }) => {
       setMenuName("");
       setDescription("");
       setPrice("");
-      fetchMenus(); // Actualiza las publicaciones
     } catch (error) {
       console.error("Error al publicar el menú:", error);
       alert("Hubo un error al publicar el menú.");

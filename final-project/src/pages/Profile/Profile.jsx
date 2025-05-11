@@ -1,25 +1,44 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 import Navbar from '../../components/navbar/NavBar';
 import Footer from '../../components/footer/Footer';
-import './Profile.css'; 
+import './Profile.css';
 
 const Profile = () => {
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+  const auth = getAuth();
 
   useEffect(() => {
-    const data = localStorage.getItem('userData');
-    if (data) {
-      setUserData(JSON.parse(data));
-    }
-    setLoading(false);
-  }, []);
+    // Escucha los cambios en el estado de autenticación
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // Si el usuario está logueado, establece los datos del usuario
+        setUserData({
+          username: user.displayName || "Usuario",
+          email: user.email,
+        });
+      } else {
+        // Si no hay usuario logueado, redirige al inicio de sesión
+        setUserData(null);
+      }
+      setLoading(false);
+    });
 
-  const handleLogout = () => {
-    localStorage.removeItem('userData');
-    setUserData(null);
+    // Limpia el listener al desmontar el componente
+    return () => unsubscribe();
+  }, [auth]);
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      setUserData(null);
+      navigate('/'); // Redirige al inicio después de cerrar sesión
+    } catch (error) {
+      console.error("Error al cerrar sesión:", error);
+    }
   };
 
   if (loading) {
@@ -72,10 +91,9 @@ const Profile = () => {
             <span className="detail-value">{userData.username}</span>
           </div>
           
-          
           <div className="detail-item">
-            <span className="detail-label">Contraseña:</span>
-            <span className="detail-value">••••••••</span>
+            <span className="detail-label">Correo electrónico:</span>
+            <span className="detail-value">{userData.email}</span>
           </div>
         </div>
         

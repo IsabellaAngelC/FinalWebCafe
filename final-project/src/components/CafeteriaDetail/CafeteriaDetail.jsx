@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
-import { useDispatch } from 'react-redux'; // Importa useDispatch
-import { agregarPedido } from '../../redux/pedidosSlice'; // Importa la acción
+//import { useDispatch } from 'react-redux'; // Importa useDispatch
+//import { agregarPedido } from '../../redux/pedidosSlice'; // Importa la acción
 import { useNavigate } from 'react-router-dom';
 import { cardsinfo } from '../../data/data';
 import Navbar from '../navbar/NavBar';
@@ -10,7 +10,7 @@ import './CafeteriaDetail.css';
 function CafeteriaDetail() {
   const navigate = useNavigate();
   const { id } = useParams();
-  const dispatch = useDispatch(); // Inicializa dispatch
+  //const dispatch = useDispatch(); // Inicializa dispatch
   const cafeteria = cardsinfo.find(item => item.id === Number(id));
   const handleComprar = (item) => {
     navigate('/nuevo-pedido', { state: { item } }); // Navega al formulario con los datos del pedido
