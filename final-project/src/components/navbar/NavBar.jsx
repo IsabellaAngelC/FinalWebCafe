@@ -29,7 +29,10 @@ function Navbar() {
         <div className="navbar-links">
           {/* Cambia dinámicamente el enlace del botón "Home" */}
           <a href={isAdmin ? '/home-admin' : '/home'}>Home</a>
-          <a href="/mispedidos">Mis pedidos</a>
+          {/* Condicional para mostrar "Solicitudes" o "Mis pedidos" */}
+          <a href={isAdmin ? '/solicitudes' : '/mispedidos'}>
+            {isAdmin ? 'Solicitudes' : 'Mis pedidos'}
+          </a>
           <a href="https://www.icesi.edu.co/servicios/contactenos/">Ayuda</a>
           <a href="/profile">Mi perfil</a>
         </div>

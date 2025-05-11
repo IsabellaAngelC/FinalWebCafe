@@ -1,29 +1,55 @@
-import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
+import { collection, onSnapshot, query, where } from 'firebase/firestore';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { db } from '../../../services/firebaseConfig';
 import Navbar from '../../../components/navbar/NavBar';
 import Footer from '../../../components/footer/Footer';
-import './MisPedidos.css'
+import './MisPedidos.css';
 
 const MisPedidos = () => {
-    const pedidosRedux = useSelector((state) => state.pedidos);
-    const [pedidos, setPedidos] = useState([]);
+  const [pedidos, setPedidos] = useState([]);
+  const [loading, setLoading] = useState(true); // Estado de carga
+  const auth = getAuth();
 
-    useEffect(() => {
-        // Combinar pedidos del estado global y localStorage
-        const pedidosGuardados = JSON.parse(localStorage.getItem('pedidos')) || [];
-        setPedidos([...pedidosRedux, ...pedidosGuardados]);
-      }, [pedidosRedux]); // Escucha cambios en pedidosRedux
-    
-    return (
-        <div className="container">
+  useEffect(() => {
+    const unsubscribeAuth = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const pedidosRef = collection(db, 'pedidos');
+        const q = query(pedidosRef, where('estudiante', '==', user.displayName || user.email)); // Usa displayName o email como alternativa
+
+        const unsubscribePedidos = onSnapshot(q, (querySnapshot) => {
+          const fetchedPedidos = querySnapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }));
+          setPedidos(fetchedPedidos);
+          setLoading(false); // Finaliza la carga
+        });
+
+        return () => unsubscribePedidos();
+      } else {
+        setPedidos([]);
+        setLoading(false); // Finaliza la carga si no hay usuario
+      }
+    });
+
+    return () => unsubscribeAuth();
+  }, [auth]);
+
+  if (loading) {
+    return <p>Cargando...</p>; // Muestra un mensaje de carga mientras se obtienen los datos
+  }
+
+  return (
+    <div className="container">
       <Navbar />
       <h1>Mis Pedidos</h1>
       <div className="pedidos-container">
         {pedidos.length > 0 ? (
-          pedidos.map((pedido, index) => (
-            <div key={index} className="pedido-item">
+          pedidos.map((pedido) => (
+            <div key={pedido.id} className="pedido-item">
               <h2>{pedido.type}</h2>
-              <p>Estudiante: {pedido.estudiante}</p>
+              <p>Estado: {pedido.estado}</p>
               <p>Método de pago: {pedido.metodoPago}</p>
               {pedido.comprobante && (
                 <img
@@ -40,6 +66,7 @@ const MisPedidos = () => {
       </div>
       <Footer />
     </div>
-    );
-}
+  );
+};
+
 export default MisPedidos;

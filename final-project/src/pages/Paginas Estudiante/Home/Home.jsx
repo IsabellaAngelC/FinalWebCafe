@@ -2,11 +2,13 @@ import './Home.css';
 import Navbar from '../../../components/navbar/NavBar';
 import Footer from '../../../components/footer/Footer';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { db } from '../../../services/firebaseConfig';
 import { collection, getDocs } from 'firebase/firestore';
 
 const Home = () => {
   const [menus, setMenus] = useState([]);
+  const navigate = useNavigate();
 
   // Función para obtener los menús desde Firebase
   const fetchMenus = async () => {
@@ -37,6 +39,14 @@ const Home = () => {
             <p><strong>Descripción:</strong> {menu.description}</p>
             <p><strong>Precio:</strong> {menu.price}</p>
             <p><strong>Publicado por:</strong> {menu.username}</p>
+            <button
+              className="buy-button"
+              onClick={() =>
+                navigate('/nuevo-pedido', { state: { item: { type: menu.menuName } } })
+              }
+            >
+              Comprar
+            </button>
           </div>
         ))}
       </div>

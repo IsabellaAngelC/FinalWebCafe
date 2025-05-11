@@ -1,7 +1,7 @@
 import './Signup.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 import { db, auth } from '../../services/firebaseConfig';
 
@@ -19,6 +19,11 @@ const Signup = () => {
       // Crear usuario en Firebase Authentication
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
+
+      // Configurar el displayName del usuario en Firebase Authentication
+      await updateProfile(user, {
+        displayName: username, // Configura el username como displayName
+      });
 
       // Guardar datos adicionales en Firestore
       await setDoc(doc(db, 'users', user.uid), {
@@ -77,15 +82,6 @@ const Signup = () => {
 
         <button type="submit" className="signup-button">Sign Up</button>
       </form>
-
-      <div className="signup-link">
-        <p className="si-account">
-          Already have an account?{' '}
-          <span className="login-link" onClick={() => navigate('/')}>
-            Login now
-          </span>
-        </p>
-      </div>
     </div>
   );
 };
