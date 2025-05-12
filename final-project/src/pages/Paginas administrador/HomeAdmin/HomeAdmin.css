@@ -15,7 +15,7 @@
 /* Título de publicaciones */
 .title {
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: 700;
     color: #4C2400; /* Marrón oscuro */
     text-align: center;
     margin-bottom: 20px; /* Espaciado debajo del título */
@@ -23,7 +23,7 @@
 
 /* Botón de publicar */
 .publish-button {
-    background-color: #713001; /* Marrón oscuro */
+    background-color: #7D4230; /* Marrón oscuro */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -36,12 +36,12 @@
 }
 
 .publish-button:hover {
-    background-color: #925a1a; /* Marrón más claro */
+    background-color: #482e23; /* Marrón más claro */
     transform: translateY(-2px); /* Eleva el botón al pasar el mouse */
 }
 
 .publish-button:active {
-    background-color: #5a2600; /* Marrón más oscuro */
+    background-color: #7D4230; /* Marrón más oscuro */
     transform: translateY(0); /* Restaura la posición */
 }
 

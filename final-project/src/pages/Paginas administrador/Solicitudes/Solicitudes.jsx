@@ -26,7 +26,7 @@ const Solicitudes = () => {
     try {
       const pedidoRef = doc(db, 'pedidos', id);
       await updateDoc(pedidoRef, { estado: nuevoEstado });
-      alert(`Estado actualizado a: ${nuevoEstado}`);
+      
     } catch (error) {
       console.error('Error al actualizar el estado:', error);
     }

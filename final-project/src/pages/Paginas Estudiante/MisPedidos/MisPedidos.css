@@ -17,7 +17,7 @@ p {
     width: 100%;
     max-width: 1200px;
     padding: 20px;
-    background-color: #f9f9f9; /* Fondo claro */
+    background-color: #E6D4C8; /* Fondo claro */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
     border-radius: 8px; /* Bordes redondeados */
     margin: 20px auto;
@@ -33,7 +33,7 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
     padding: 20px;
     margin-bottom: 20px;
-    width: 100%;
+    width: 80%;
     max-width: 600px; /* Ancho máximo para las tarjetas */
     display: flex;
     flex-direction: column;

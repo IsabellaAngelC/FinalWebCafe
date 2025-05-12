@@ -22,7 +22,7 @@ body {
 
 /* Títulos */
 h1 {
-    color: #713001; /* Marrón oscuro */
+    color: #7E4639; /* Marrón oscuro */
     font-size: 1.8rem;
     text-align: center;
     margin-bottom: 20px;
@@ -36,7 +36,7 @@ h2 {
 }
 
 span {
-    color: #5d2a2a; /* Marrón claro */
+    color: #7E4639; /* Marrón claro */
 }
 
 /* Tarjeta del perfil */
@@ -57,7 +57,7 @@ span {
 .profile-avatar {
     width: 80px;
     height: 80px;
-    background-color: #713001; /* Marrón oscuro */
+    background-color: #B38D80; /* Marrón oscuro */
     color: #ffffff; /* Texto blanco */
     border-radius: 50%; /* Forma circular */
     display: flex;
@@ -96,7 +96,7 @@ span {
 
 /* Botón de cerrar sesión */
 .logout-button {
-    background-color: #713001; /* Marrón oscuro */
+    background-color: #7E4639; /* Marrón oscuro */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -110,13 +110,13 @@ span {
 }
 
 .logout-button:hover {
-    background-color: #5a2600; /* Marrón más oscuro */
+    background-color: #7E4639; /* Marrón más oscuro */
     transform: translateY(-2px); /* Eleva el botón al pasar el mouse */
 }
 
 /* Mensaje cuando no está logueado */
 .not-logged-title {
-    color: #713001;
+    color: #7E4639;
     text-align: center;
     margin-top: 60px;
     margin-bottom: 20px;
@@ -157,12 +157,12 @@ span {
 }
 
 .login-button {
-    background-color: #713001;
+    background-color: #7E4639;
     color: white;
 }
 
 .login-button:hover {
-    background-color: #5a2600;
+    background-color: #7E4639;
 }
 
 .signup-button {

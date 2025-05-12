@@ -1,10 +1,15 @@
 .menu-form {
-   font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 20px;
+  margin: 20px auto; /* Centra el formulario horizontalmente */
+  max-width: 400px; /* Hace que el formulario sea más angosto */
+  padding: 20px; /* Agrega espacio interno */
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 .menu-form input,
@@ -22,8 +27,16 @@
   padding: 10px 20px;
   cursor: pointer;
   font-size: 16px;
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .menu-form button:hover {
   background-color: #925a1a;
+  transform: translateY(-2px); /* Eleva el botón al pasar el mouse */
+}
+
+.menu-form button:active {
+  background-color: #5a2600;
+  transform: translateY(0); /* Restaura la posición */
 }
