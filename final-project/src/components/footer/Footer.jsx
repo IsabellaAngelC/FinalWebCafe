@@ -14,7 +14,7 @@ const Footer = () => {
       
 
       <p className="copyright">
-        Copyright © COGNOSPHERE. All Rights Reserved.
+        Copyright ©ICESI. All Rights Reserved.
       </p>
 
       <div className="language-selector">
