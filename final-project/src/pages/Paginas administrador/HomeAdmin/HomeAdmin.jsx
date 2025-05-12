@@ -29,28 +29,28 @@ const HomeAdmin = () => {
 
   return (
     <div className="home-admin-container">
-      <Navbar />
-      <div className="content">
-        <button className="publish-button" onClick={() => setShowForm(!showForm)}>
-          {showForm ? "Cerrar formulario" : "Publicar nuevo menú"}
-        </button>
+  <Navbar />
+  <div className="content">
+    <h2 className="title">Publicaciones</h2> {/* Título centrado */}
+    <button className="publish-button" onClick={() => setShowForm(!showForm)}>
+      {showForm ? "Cerrar formulario" : "Publicar nuevo menú"}
+    </button>
 
-        {showForm && <MenuForm user={user} />}
+    {showForm && <MenuForm user={user} />}
 
-        <div className="menu-posts">
-          <h2>Publicaciones</h2>
-          {menus.map((menu) => (
-            <div key={menu.id} className="menu-post">
-              <h3>{menu.menuName}</h3>
-              <p><strong>Publicado por:</strong> {menu.username}</p>
-              <p><strong>Descripción:</strong> {menu.description}</p>
-              <p><strong>Precio:</strong> {menu.price}</p>
-            </div>
-          ))}
+    <div className="menu-posts">
+      {menus.map((menu) => (
+        <div key={menu.id} className="menu-post">
+          <h3>{menu.menuName}</h3>
+          <p><strong>Publicado por:</strong> {menu.username}</p>
+          <p><strong>Descripción:</strong> {menu.description}</p>
+          <p><strong>Precio:</strong> {menu.price}</p>
         </div>
-      </div>
-      <Footer />
+      ))}
     </div>
+  </div>
+  <Footer />
+</div>
   );
 };
 

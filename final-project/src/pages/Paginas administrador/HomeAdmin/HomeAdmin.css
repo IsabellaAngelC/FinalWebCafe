@@ -1,40 +1,118 @@
-.home-admin-container{
+/* Contenedor principal */
+.home-admin-container {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     margin-top: 60px; /* Igual a la altura de la navbar */
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f4f4f4; /* Fondo claro */
+    min-height: 100vh; /* Asegura que el contenedor cubra toda la pantalla */
 }
 
+/* Título de publicaciones */
+.title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #4C2400; /* Marrón oscuro */
+    text-align: center;
+    margin-bottom: 20px; /* Espaciado debajo del título */
+}
+
+/* Botón de publicar */
 .publish-button {
-  background-color: #713001;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-bottom: 20px;
+    background-color: #713001; /* Marrón oscuro */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 20px; /* Espaciado debajo del botón */
 }
 
 .publish-button:hover {
-  background-color: #925a1a;
+    background-color: #925a1a; /* Marrón más claro */
+    transform: translateY(-2px); /* Eleva el botón al pasar el mouse */
 }
 
+.publish-button:active {
+    background-color: #5a2600; /* Marrón más oscuro */
+    transform: translateY(0); /* Restaura la posición */
+}
+
+/* Contenedor de publicaciones */
 .menu-posts {
-  margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten automáticamente */
+    gap: 20px; /* Espaciado entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    width: 100%;
+    margin-top: 20px;
 }
 
+/* Tarjeta de cada publicación */
 .menu-post {
-  border: 1px solid #ddd;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    width: 300px; /* Ancho fijo para las tarjetas */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaciado entre los elementos */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animación al pasar el mouse */
 }
 
+.menu-post:hover {
+    transform: translateY(-5px); /* Eleva la tarjeta al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+}
+
+/* Título de la publicación */
 .menu-post h3 {
-  margin: 0 0 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #4a4a4a; /* Gris oscuro */
+    margin-bottom: 10px;
 }
 
+/* Texto de la publicación */
 .menu-post p {
-  margin: 5px 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #666; /* Gris claro */
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+/* Botón de acción dentro de la tarjeta */
+.action-button {
+    background-color: #713001; /* Marrón oscuro */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start; /* Alinea el botón al inicio */
+}
+
+.action-button:hover {
+    background-color: #925a1a; /* Marrón más claro */
+    transform: translateY(-2px); /* Eleva el botón al pasar el mouse */
+}
+
+.action-button:active {
+    background-color: #5a2600; /* Marrón más oscuro */
+    transform: translateY(0); /* Restaura la posición */
 }
