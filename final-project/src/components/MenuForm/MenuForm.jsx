@@ -17,7 +17,7 @@ const MenuForm = ({ user }) => {
         menuName,
         description,
         price,
-        username: user.username, // Se asegura de guardar el nombre del usuario actual
+        username: user.username, 
         createdAt: new Date(),
       });
 

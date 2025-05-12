@@ -16,27 +16,27 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      // Iniciar sesión con Firebase Authentication
+      
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      // Verificar si el usuario existe en Firestore
+      
       const userDoc = await getDoc(doc(db, 'users', user.uid));
       if (!userDoc.exists()) {
         alert('Usuario no encontrado');
         return;
       }
 
-      // Guardar datos en localStorage si "Remember Me" está activado
+      
       if (rememberMe) {
         localStorage.setItem('userData', JSON.stringify({ email, password }));
       }
 
-      // Redirigir según el dominio del correo
+     
       if (email.endsWith('@icesi.edu.co')) {
-        navigate('/home-admin'); // Página de administrador
+        navigate('/home-admin'); 
       } else {
-        navigate('/home'); // Página de usuario normal
+        navigate('/home'); 
       }
     } catch (err) {
       console.error('Error al iniciar sesión:', err.message);

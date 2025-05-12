@@ -27,9 +27,9 @@ function Navbar() {
         </div>
 
         <div className="navbar-links">
-          {/* Cambia dinámicamente el enlace del botón "Home" */}
+          
           <a href={isAdmin ? '/home-admin' : '/home'}>Home</a>
-          {/* Condicional para mostrar "Solicitudes" o "Mis pedidos" */}
+          
           <a href={isAdmin ? '/solicitudes' : '/mispedidos'}>
             {isAdmin ? 'Solicitudes' : 'Mis pedidos'}
           </a>
