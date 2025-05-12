@@ -12,7 +12,8 @@
   align-items: center; /* Centra verticalmente los elementos */
   padding: 0 20px; /* Espaciado interno */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para separación */
-  font-family: Arial, sans-serif; /* Fuente consistente */
+   font-family: 'Poppins', sans-serif;
+  font-weight: 400; /* Fuente consistente */
 }
 
 .navbar-container {

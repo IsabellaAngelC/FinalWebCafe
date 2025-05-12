@@ -1,4 +1,6 @@
 .home-admin-container{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     margin-top: 60px; /* Igual a la altura de la navbar */
     padding: 20px;
 }

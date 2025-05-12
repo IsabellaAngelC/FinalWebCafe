@@ -37,7 +37,7 @@ const Home = () => {
           <div key={menu.id} className="menu-card">
             <h3>{menu.menuName}</h3>
             <p><strong>Descripción:</strong> {menu.description}</p>
-            <p><strong>Precio:</strong> {menu.price}</p>
+            <p><strong>Precio:</strong> ${menu.price}</p>
             <p><strong>Publicado por:</strong> {menu.username}</p>
             <button
               className="buy-button"

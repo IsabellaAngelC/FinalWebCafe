@@ -81,6 +81,14 @@ const Signup = () => {
         {error && <p className="error-message">{error}</p>}
 
         <button type="submit" className="signup-button">Sign Up</button>
+        <div className="signup-link">
+        <p className="si-account">
+          Already have an account?{' '}
+          <span className="login-link" onClick={() => navigate('/')}>
+            Login now
+          </span>
+        </p>
+      </div>
       </form>
     </div>
   );

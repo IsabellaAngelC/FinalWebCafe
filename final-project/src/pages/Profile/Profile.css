@@ -1,139 +1,175 @@
+/* Contenedor principal del perfil */
 .profile-container {
-    max-width: 800px;
-    font-family: Arial, sans-serif;
-  }
-  
-  h1 {
-    color: #713001;
+    max-width: 360px; /* Ancho máximo de la tarjeta */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible dentro del contenedor */
+    padding: 20px;
+    background: #ffffff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+/* Fondo general para destacar la tarjeta */
+body {
+    background-color: #f4f4f4; /* Fondo claro */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+    margin: 0;
+}
+
+/* Títulos */
+h1 {
+    color: #713001; /* Marrón oscuro */
+    font-size: 1.8rem;
+    text-align: center;
     margin-bottom: 20px;
-  }
+}
 
-  h2 {
-    color: #393939;
+h2 {
+    color: #393939; /* Gris oscuro */
+    font-size: 1.2rem;
     margin-bottom: 10px;
-  }
+    text-align: center;
+}
 
-  span {
-    color: #5d2a2a;
-  }
+span {
+    color: #5d2a2a; /* Marrón claro */
+}
 
-
-  .profile-card {
-    background: #fff;
+/* Tarjeta del perfil */
+.profile-card {
+    background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
+    padding: 20px;
     margin-top: 20px;
-  }
-  
-  .profile-header {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 2rem;
-  }
-  
-  .profile-avatar {
-    width: 60px;
-    height: 60px;
-    background-color: #713001;
-    color: rgb(232, 232, 232);
-    border-radius: 50%;
+    gap: 15px; /* Espaciado entre elementos */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible dentro del contenedor */
+}
+
+/* Avatar del perfil */
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    background-color: #713001; /* Marrón oscuro */
+    color: #ffffff; /* Texto blanco */
+    border-radius: 50%; /* Forma circular */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    margin-right: 20px;
-  }
-  
-  .profile-details {
-    margin-bottom: 2rem;
-  }
-  
-  .detail-item {
-    display: flex;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .detail-label {
     font-weight: bold;
-    width: 150px;
-    color: #555;
-  }
-  
-  .detail-value {
-    flex: 1;
-  }
-  
-  .logout-button {
-    background-color: #713001;
+    margin-bottom: 15px;
+}
+
+/* Detalles del perfil */
+.profile-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaciado entre detalles */
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #e0e0e0; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo claro */
+}
+
+.detail-label {
+    font-weight: bold;
+    color: #555; /* Gris oscuro */
+}
+
+.detail-value {
+    color: #333; /* Gris más oscuro */
+}
+
+/* Botón de cerrar sesión */
+.logout-button {
+    background-color: #713001; /* Marrón oscuro */
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 8px; /* Bordes redondeados */
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-  }
-  
-  .logout-button:hover {
-    background-color: #5a2600;
-  }
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; /* Botón ocupa todo el ancho */
+    text-align: center;
+}
 
-  .not-logged-title {
+.logout-button:hover {
+    background-color: #5a2600; /* Marrón más oscuro */
+    transform: translateY(-2px); /* Eleva el botón al pasar el mouse */
+}
+
+/* Mensaje cuando no está logueado */
+.not-logged-title {
     color: #713001;
     text-align: center;
     margin-top: 60px;
     margin-bottom: 20px;
-  }
-  
-  .auth-options {
+    font-size: 1.5rem;
+}
+
+/* Opciones de autenticación */
+.auth-options {
     text-align: center;
-    max-width: 500px;
+    max-width: 300px; /* Reduce aún más el ancho */
     margin: 0 auto;
-    margin-top: 80px;
-    padding: 30px;
-    background: #fff;
+    margin-top: 40px;
+    padding: 20px;
+    background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .auth-options p {
+}
+
+.auth-options p {
     color: #555;
-    margin-bottom: 25px;
-    font-size: 1.1rem;
-  }
-  
-  .auth-buttons {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.auth-buttons {
     display: flex;
     justify-content: center;
-    gap: 15px;
-  }
-  
-  .auth-button {
-    padding: 10px 25px;
+    gap: 10px; /* Espaciado entre botones */
+}
+
+.auth-button {
+    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px; /* Bordes redondeados */
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
-  }
-  
-  .login-button {
+}
+
+.login-button {
     background-color: #713001;
     color: white;
-  }
-  
-  .login-button:hover {
+}
+
+.login-button:hover {
     background-color: #5a2600;
-  }
-  
-  .signup-button {
+}
+
+.signup-button {
     background-color: #f0f0f0;
     color: #333;
-  }
-  
-  .signup-button:hover {
+}
+
+.signup-button:hover {
     background-color: #e0e0e0;
-  }
+}

@@ -1,31 +1,31 @@
 .form-container {
+  flex: 1;
   max-width: 600px;
   margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
   padding: 2rem;
-  background-color: #f8ede3; /* Fondo beige claro */
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-family: 'Arial', sans-serif;
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
-.nav-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 100%;
-    padding: 20px;
-    background-color: #F2E5DB;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-bottom: 20px;
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Altura mínima de la pantalla */
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
   text-align: center;
-  color: #6b4226; /* Marrón oscuro */
+  color: #4a4a4a; /* Gris oscuro */
   margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 form {
@@ -38,18 +38,19 @@ label {
   display: flex;
   flex-direction: column;
   font-size: 1rem;
-  color: #6b4226; /* Marrón oscuro */
+  color: #4a4a4a; /* Gris oscuro */
 }
 
 input[type="text"],
 select,
 input[type="file"] {
   padding: 0.75rem;
-  border: 1px solid #d3b8a6; /* Marrón claro */
-  border-radius: 5px;
-  background-color: #fdf6f0; /* Fondo beige más claro */
+  border: 1px solid #e0e0e0; /* Borde gris claro */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #fdfdfd; /* Fondo blanco */
   font-size: 1rem;
-  color: #6b4226; /* Marrón oscuro */
+  color: #4a4a4a; /* Gris oscuro */
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 input[type="text"]:focus,
@@ -57,26 +58,29 @@ select:focus,
 input[type="file"]:focus {
   outline: none;
   border-color: #a67c52; /* Marrón intermedio */
-  box-shadow: 0 0 4px rgba(166, 124, 82, 0.5);
+  box-shadow: 0 0 4px rgba(166, 124, 82, 0.5); /* Sombra al enfocar */
 }
 
 button {
   padding: 0.75rem;
-  background-color: #a67c52; /* Marrón intermedio */
+  background-color: #4CAF50; /* Verde para el botón */
   color: #fff; /* Blanco */
   border: none;
-  border-radius: 5px;
+  border-radius: 8px; /* Bordes redondeados */
   font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: #6b4226; /* Marrón oscuro */
+  background-color: #45a049; /* Verde más oscuro */
+  transform: translateY(-2px); /* Eleva el botón al pasar el mouse */
 }
 
 button:active {
-  background-color: #5a3620; /* Marrón más oscuro */
+  background-color: #3e8e41; /* Verde más oscuro al hacer clic */
+  transform: translateY(0); /* Restaura la posición */
 }
 
 input[type="file"] {
@@ -85,19 +89,19 @@ input[type="file"] {
 }
 
 input[type="file"]::file-selector-button {
-  background-color: #a67c52; /* Marrón intermedio */
+  background-color: #4CAF50; /* Verde para el botón */
   color: #fff; /* Blanco */
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 5px;
+  border-radius: 8px; /* Bordes redondeados */
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 input[type="file"]::file-selector-button:hover {
-  background-color: #6b4226; /* Marrón oscuro */
+  background-color: #45a049; /* Verde más oscuro */
 }
 
 input[type="file"]::file-selector-button:active {
-  background-color: #5a3620; /* Marrón más oscuro */
+  background-color: #3e8e41; /* Verde más oscuro al hacer clic */
 }
