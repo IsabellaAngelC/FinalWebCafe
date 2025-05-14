@@ -35,7 +35,7 @@ body {
 }
 
 /* Formulario */
-.signup-form {
+.signup-container .signup-form {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -43,12 +43,12 @@ body {
 }
 
 /* Grupo de campos */
-.form-group {
+.signup-container .form-group {
   display: flex;
   flex-direction: column;
 }
 
-.form-group h2 {
+.signup-container .form-group h2 {
  color: #4C2400; /* Marrón oscuro */
   font-size: 1rem;
   margin-bottom: 0.5rem;
@@ -56,7 +56,7 @@ body {
 }
 
 /* Campos de entrada */
-.form-group input {
+.signup-container .form-group input {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid #713001; /* Borde marrón */
@@ -66,14 +66,14 @@ body {
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.form-group input:focus {
+.signup-container .form-group input:focus {
    outline: none;
   border-color: #955B28; /* Marrón intermedio */
   box-shadow: 0 0 0 3px rgba(149, 91, 40, 0.3); /* Sombra al enfocar */
 }
 
 /* Botón de signup */
-.signup-button {
+.signup-container .signup-button {
   width: 100%;
   padding: 0.75rem;
   background-color: #955B28; /* Marrón intermedio */
@@ -86,42 +86,42 @@ body {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.signup-button:hover {
+.signup-container .signup-button:hover {
    background-color: #4C2400; /* Marrón oscuro */
   transform: translateY(-2px); /* Eleva el botón al pasar el mouse */
 }
 
-.signup-button:active {
+.signup-container .signup-button:active {
   background-color: #3A1C00; /* Marrón más oscuro */
   transform: translateY(0); /* Restaura la posición */
 }
 
 /* Divider */
-.divider {
+.signup-container .divider {
   height: 1px;
   background: #e2e8f0; /* Gris claro */
   margin: 1.5rem 0;
 }
 
 /* Enlace para iniciar sesión */
-.login-link {
+.signup-container .login-link {
   margin-top: 1.5rem;
   text-align: center;
   color: #2c65df; /* Marrón oscuro */
 }
 
-.login-link a {
+.signup-container .login-link a {
   color: #2c65df;
   text-decoration: none;
   font-weight: 500;
 }
 
-.login-link a:hover {
+.signup-container .login-link a:hover {
   text-decoration: underline;
 }
 
 /* Mensaje de ya tener cuenta */
-.si-account {
+.signup-container .si-account {
   color: #4C2400;
   font-size: 0.9rem;
   text-align: center;

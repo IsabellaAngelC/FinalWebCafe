@@ -17,7 +17,8 @@ const MenuForm = ({ user }) => {
         menuName,
         description,
         price,
-        username: user.username, 
+        username: user.username,
+        adminEmail: user.email, 
         createdAt: new Date(),
       });
 

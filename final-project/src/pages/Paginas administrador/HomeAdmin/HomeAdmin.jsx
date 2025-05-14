@@ -1,6 +1,7 @@
 import Navbar from "../../../components/navbar/NavBar";
 import Footer from "../../../components/footer/Footer";
 import MenuForm from "../../../components/MenuForm/MenuForm";
+import { getAuth } from "firebase/auth";
 import { useState, useEffect } from "react";
 import { db } from "../../../services/firebaseConfig";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
@@ -12,20 +13,24 @@ const HomeAdmin = () => {
   const [user] = useState({ username: "Cafetería Bristo" }); // Simulación del usuario actual
 
   // Función para escuchar los cambios en tiempo real desde Firebase
-  useEffect(() => {
-    const menusRef = collection(db, "menus");
-    const q = query(menusRef, where("username", "==", user.username));
+useEffect(() => {
+  const auth = getAuth();
+  const user = auth.currentUser;
+  if (!user) return;
 
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      const fetchedMenus = querySnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      setMenus(fetchedMenus);
-    });
+  const menusRef = collection(db, "menus");
+  const q = query(menusRef, where("adminEmail", "==", user.email)); // <--- filtra por email
 
-    return () => unsubscribe(); // Limpia el listener al desmontar el componente
-  }, [user.username]);
+  const unsubscribe = onSnapshot(q, (querySnapshot) => {
+    const fetchedMenus = querySnapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+    setMenus(fetchedMenus);
+  });
+
+  return () => unsubscribe();
+}, []);
 
   return (
     <div className="home-admin-container">

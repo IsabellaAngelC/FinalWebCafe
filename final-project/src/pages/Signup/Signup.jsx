@@ -1,4 +1,4 @@
-import './Signup.css';
+import './Signup.css'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
