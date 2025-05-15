@@ -9,9 +9,9 @@ import './Form.css';
 function Form() {
   const location = useLocation();
   const navigate = useNavigate();
-  const pedido = location.state?.item || {}; // Recibe los datos del pedido
+  const pedido = location.state?.item || {}; 
 
-  // Obtener el usuario actualmente logueado desde Firebase Authentication
+  
   const auth = getAuth();
   const currentUser = auth.currentUser;
 

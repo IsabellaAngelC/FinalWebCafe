@@ -12,22 +12,22 @@ const Profile = () => {
   const auth = getAuth();
 
   useEffect(() => {
-    // Escucha los cambios en el estado de autenticación
+   
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        // Si el usuario está logueado, establece los datos del usuario
+       
         setUserData({
           username: user.displayName || "Usuario",
           email: user.email,
         });
       } else {
-        // Si no hay usuario logueado, redirige al inicio de sesión
+       
         setUserData(null);
       }
       setLoading(false);
     });
 
-    // Limpia el listener al desmontar el componente
+    
     return () => unsubscribe();
   }, [auth]);
 
@@ -35,7 +35,7 @@ const Profile = () => {
     try {
       await signOut(auth);
       setUserData(null);
-      navigate('/'); // Redirige al inicio después de cerrar sesión
+      navigate('/'); 
     } catch (error) {
       console.error("Error al cerrar sesión:", error);
     }

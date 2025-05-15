@@ -10,23 +10,23 @@ const Home = () => {
   const [menus, setMenus] = useState([]);
   const navigate = useNavigate();
 
-  // Función para obtener los menús desde Firebase
+  
   const fetchMenus = async () => {
     try {
-      const menusRef = collection(db, 'menus'); // Conecta con la colección "menus"
+      const menusRef = collection(db, 'menus'); 
       const querySnapshot = await getDocs(menusRef);
       const fetchedMenus = querySnapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
       }));
-      setMenus(fetchedMenus); // Actualiza el estado con los menús obtenidos
+      setMenus(fetchedMenus); 
     } catch (error) {
       console.error('Error al obtener los menús:', error);
     }
   };
 
   useEffect(() => {
-    fetchMenus(); // Llama a la función al montar el componente
+    fetchMenus(); 
   }, []);
 
   return (
@@ -44,7 +44,7 @@ const Home = () => {
               onClick={() =>
   navigate('/nuevo-pedido', { state: { item: { 
     type: menu.menuName,
-    adminEmail: menu.adminEmail // <-- Solo pasas estos dos campos
+    adminEmail: menu.adminEmail 
   } } })
 }
   >

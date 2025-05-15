@@ -16,16 +16,16 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      // Crear usuario en Firebase Authentication
+      
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      // Configurar el displayName del usuario en Firebase Authentication
+      
       await updateProfile(user, {
-        displayName: username, // Configura el username como displayName
+        displayName: username, 
       });
 
-      // Guardar datos adicionales en Firestore
+      
       await setDoc(doc(db, 'users', user.uid), {
         uid: user.uid,
         email: email,
@@ -33,10 +33,10 @@ const Signup = () => {
       });
 
       console.log('Usuario registrado y datos guardados en Firestore');
-      navigate('/'); // Redirigir al login o página principal
+      navigate('/'); 
     } catch (err) {
       console.error('Error al registrar usuario:', err.message);
-      setError(err.message); // Mostrar error al usuario
+      setError(err.message); 
     }
   };
 

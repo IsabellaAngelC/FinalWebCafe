@@ -12,7 +12,7 @@ const HomeAdmin = () => {
   const [menus, setMenus] = useState([]);
   const [user, setUser] = useState(null);
 
-  // Obtener usuario autenticado y escuchar menús propios
+  
   useEffect(() => {
     const auth = getAuth();
     const unsubscribeAuth = auth.onAuthStateChanged((firebaseUser) => {
@@ -27,13 +27,13 @@ const HomeAdmin = () => {
           }));
           setMenus(fetchedMenus);
         });
-        // Limpia el listener de menús al cambiar de usuario o desmontar
+       
         return () => unsubscribeMenus();
       } else {
         setMenus([]);
       }
     });
-    // Limpia el listener de auth al desmontar
+   
     return () => unsubscribeAuth();
   }, []);
 

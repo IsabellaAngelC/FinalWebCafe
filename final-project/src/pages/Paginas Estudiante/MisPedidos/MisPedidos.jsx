@@ -8,14 +8,14 @@ import './MisPedidos.css';
 
 const MisPedidos = () => {
   const [pedidos, setPedidos] = useState([]);
-  const [loading, setLoading] = useState(true); // Estado de carga
+  const [loading, setLoading] = useState(true); 
   const auth = getAuth();
 
   useEffect(() => {
     const unsubscribeAuth = onAuthStateChanged(auth, (user) => {
       if (user) {
         const pedidosRef = collection(db, 'pedidos');
-        const q = query(pedidosRef, where('estudiante', '==', user.displayName || user.email)); // Usa displayName o email como alternativa
+        const q = query(pedidosRef, where('estudiante', '==', user.displayName || user.email)); 
 
         const unsubscribePedidos = onSnapshot(q, (querySnapshot) => {
           const fetchedPedidos = querySnapshot.docs.map((doc) => ({
@@ -23,13 +23,13 @@ const MisPedidos = () => {
             ...doc.data(),
           }));
           setPedidos(fetchedPedidos);
-          setLoading(false); // Finaliza la carga
+          setLoading(false); 
         });
 
         return () => unsubscribePedidos();
       } else {
         setPedidos([]);
-        setLoading(false); // Finaliza la carga si no hay usuario
+        setLoading(false); 
       }
     });
 
@@ -37,7 +37,7 @@ const MisPedidos = () => {
   }, [auth]);
 
   if (loading) {
-    return <p>Cargando...</p>; // Muestra un mensaje de carga mientras se obtienen los datos
+    return <p>Cargando...</p>; 
   }
 
   return (

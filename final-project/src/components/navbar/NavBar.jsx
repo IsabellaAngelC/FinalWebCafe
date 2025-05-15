@@ -10,13 +10,13 @@ function Navbar() {
     const auth = getAuth();
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user && user.email.endsWith('@icesi.edu.co')) {
-        setIsAdmin(true); // Usuario con email de administrador
+        setIsAdmin(true); 
       } else {
-        setIsAdmin(false); // Usuario normal o no logueado
+        setIsAdmin(false); 
       }
     });
 
-    return () => unsubscribe(); // Limpia el listener al desmontar el componente
+    return () => unsubscribe(); 
   }, []);
 
   return (
