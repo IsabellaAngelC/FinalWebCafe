@@ -1,3 +1,5 @@
+import { Provider } from 'react-redux';
+import store from './redux/store';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
@@ -10,18 +12,20 @@ import Solicitudes from './pages/Paginas administrador/Solicitudes/Solicitudes';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/home-admin" element={<HomeAdmin />} />
-		    <Route path="/profile" element={<Profile />} />
-        <Route path="/nuevo-pedido" element={<Form />} />
-		    <Route path="/mispedidos" element={<MisPedidos />} />
-        <Route path="/solicitudes" element={<Solicitudes />} />
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/home-admin" element={<HomeAdmin />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/nuevo-pedido" element={<Form />} />
+          <Route path="/mispedidos" element={<MisPedidos />} />
+          <Route path="/solicitudes" element={<Solicitudes />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 }
 
