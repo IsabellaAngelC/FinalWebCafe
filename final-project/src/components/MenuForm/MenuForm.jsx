@@ -8,30 +8,34 @@ const MenuForm = ({ user }) => {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    try {
-      const menusRef = collection(db, "menus");
-      await addDoc(menusRef, {
-        menuName,
-        description,
-        price,
-        username: user.username,
-        adminEmail: user.email, 
-        createdAt: new Date(),
-      });
+  if (!user || !user.email) {
+    alert("No se pudo identificar el usuario administrador.");
+    return;
+  }
 
-      alert("Menú publicado con éxito");
-      setMenuName("");
-      setDescription("");
-      setPrice("");
-    } catch (error) {
-      console.error("Error al publicar el menú:", error);
-      alert("Hubo un error al publicar el menú.");
-    }
-  };
+  try {
+    const menusRef = collection(db, "menus");
+    await addDoc(menusRef, {
+      menuName,
+      description,
+      price,
+      username: user.displayName || "",
+      adminEmail: user.email,
+      createdAt: new Date(),
+    });
 
+    alert("Menú publicado con éxito");
+    setMenuName("");
+    setDescription("");
+    setPrice("");
+  } catch (error) {
+    console.error("Error al publicar el menú:", error);
+    alert("Hubo un error al publicar el menú.");
+  }
+};
   return (
     <form className="menu-form" onSubmit={handleSubmit}>
       <h2>Publicar Nuevo Menú</h2>

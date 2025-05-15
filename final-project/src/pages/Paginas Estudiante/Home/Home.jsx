@@ -42,9 +42,12 @@ const Home = () => {
             <button
               className="buy-button"
               onClick={() =>
-                navigate('/nuevo-pedido', { state: { item: { type: menu.menuName } } })
-              }
-            >
+  navigate('/nuevo-pedido', { state: { item: { 
+    type: menu.menuName,
+    adminEmail: menu.adminEmail // <-- Solo pasas estos dos campos
+  } } })
+}
+  >
               Comprar
             </button>
           </div>

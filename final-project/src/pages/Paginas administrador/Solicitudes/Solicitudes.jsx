@@ -1,18 +1,29 @@
 import { useEffect, useState } from 'react';
 import { collection, onSnapshot, doc, updateDoc } from 'firebase/firestore';
-
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { query, where } from "firebase/firestore";
 import { db } from '../../../services/firebaseConfig';
 import Navbar from '../../../components/navbar/NavBar';
 import Footer from '../../../components/footer/Footer';
+
 import './Solicitudes.css';
 
 const Solicitudes = () => {
   const [pedidos, setPedidos] = useState([]);
+  
 
-  useEffect(() => {
-    const pedidosRef = collection(db, 'pedidos');
+useEffect(() => {
+  const auth = getAuth();
+  const unsubscribeAuth = onAuthStateChanged(auth, (user) => {
+    if (!user) {
+      setPedidos([]);
+      return;
+    }
 
-    const unsubscribe = onSnapshot(pedidosRef, (querySnapshot) => {
+const pedidosRef = collection(db, "pedidos");
+    const q = query(pedidosRef, where("adminEmail", "==", user.email));
+
+    const unsubscribePedidos = onSnapshot(q, (querySnapshot) => {
       const fetchedPedidos = querySnapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
@@ -20,8 +31,11 @@ const Solicitudes = () => {
       setPedidos(fetchedPedidos);
     });
 
-    return () => unsubscribe();
-  }, []);
+  return () => unsubscribePedidos();
+  });
+
+   return () => unsubscribeAuth();
+}, []);
 
   const actualizarEstado = async (id, nuevoEstado) => {
     try {

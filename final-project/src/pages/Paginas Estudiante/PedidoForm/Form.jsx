@@ -18,6 +18,11 @@ function Form() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (!pedido.adminEmail) {
+    alert("No se pudo identificar la cafetería o administrador responsable del pedido.");
+    return;
+  }
+
     try {
       // Crear el pedido con los detalles adicionales
       const nuevoPedido = {
@@ -30,6 +35,7 @@ function Form() {
           : null,
         estado: 'Recibido', // Estado inicial del pedido
         createdAt: serverTimestamp(), // Marca de tiempo del pedido
+        adminEmail: pedido.adminEmail,
       };
 
       // Guardar el pedido en Firebase
