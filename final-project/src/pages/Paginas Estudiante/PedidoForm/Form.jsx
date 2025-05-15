@@ -24,26 +24,26 @@ function Form() {
   }
 
     try {
-      // Crear el pedido con los detalles adicionales
+      
       const nuevoPedido = {
         ...pedido,
-        estudiante: currentUser?.displayName || 'Usuario Anónimo', // Nombre del usuario logueado
+        estudiante: currentUser?.displayName || 'Usuario Anónimo', 
         metodoPago: e.target.metodoPago.value,
-        horaEntrega: e.target.horaEntrega.value, // Nueva hora seleccionada
+        horaEntrega: e.target.horaEntrega.value, 
         comprobante: e.target.comprobante.files[0]
-          ? URL.createObjectURL(e.target.comprobante.files[0]) // Convertir archivo a URL
+          ? URL.createObjectURL(e.target.comprobante.files[0]) 
           : null,
-        estado: 'Recibido', // Estado inicial del pedido
-        createdAt: serverTimestamp(), // Marca de tiempo del pedido
+        estado: 'Recibido',
+        createdAt: serverTimestamp(), 
         adminEmail: pedido.adminEmail,
       };
 
-      // Guardar el pedido en Firebase
+      
       const pedidosRef = collection(db, 'pedidos');
       await addDoc(pedidosRef, nuevoPedido);
 
       alert('Pedido enviado con éxito');
-      navigate('/mispedidos'); // Redirigir a la página de "Mis Pedidos"
+      navigate('/mispedidos'); 
     } catch (error) {
       console.error('Error al enviar el pedido:', error);
       alert('Hubo un error al enviar el pedido.');
