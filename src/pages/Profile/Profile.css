@@ -144,13 +144,13 @@ span {
 .auth-buttons {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Espaciado entre botones */
+    gap: 10px; 
 }
 
 .auth-button {
     padding: 10px 20px;
     border: none;
-    border-radius: 8px; /* Bordes redondeados */
+    border-radius: 8px; 
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
