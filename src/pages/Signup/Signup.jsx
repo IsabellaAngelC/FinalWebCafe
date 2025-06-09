@@ -39,35 +39,45 @@ const Signup = () => {
   return (
     <div className="signup-container">
       <form className="signup-form" onSubmit={handleSubmit}>
-        <h2>Sign up Now</h2>
-        <input
-          type="email"
-          placeholder="Ingresa tu email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="text"
-          placeholder="Nombre de usuario"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Ingresa tu contraseña"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
+        <h1>Sign up Now</h1>
+
+        <div className="form-group">
+          <input
+            type="email"
+            placeholder="Ingresa tu email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <input
+            type="text"
+            placeholder="Nombre de usuario"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <input
+            type="password"
+            placeholder="Ingresa tu contraseña"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+
         {error && <p className="error-message">{error}</p>}
+
         <button type="submit" className="signup-button">Sign Up</button>
-        <p>
+
+        <p className="si-account">
           ¿Ya tienes cuenta?{' '}
-          <span className="login-link" onClick={() => navigate('/')}>
-            Login now
-          </span>
+          <span className="login-link" onClick={() => navigate('/')}>Login now</span>
         </p>
       </form>
     </div>
