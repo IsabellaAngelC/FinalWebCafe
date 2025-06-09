@@ -28,11 +28,11 @@
 
 .navbar-logo {
   display: flex; 
-  align-items: center;/* Centra verticalmente el logo */
+  align-items: center;
 }
 
 .navbar-logo img {
-  height: 40px; /* Tamaño del logo */
+  height: 40px; 
   width: auto;
   
 }
