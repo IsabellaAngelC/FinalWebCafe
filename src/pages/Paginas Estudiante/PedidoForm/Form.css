@@ -15,14 +15,14 @@
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh; /* Altura mínima de la pantalla */
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
 }
 
 h1 {
   text-align: center;
-  color: #4a4a4a; /* Gris oscuro */
+  color: #4a4a4a; 
   margin-bottom: 1.5rem;
   font-size: 1.8rem;
   font-weight: 600;
