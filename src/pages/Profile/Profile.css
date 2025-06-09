@@ -173,3 +173,54 @@ span {
 .signup-button:hover {
     background-color: #e0e0e0;
 }
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+
+  .profile-container,
+  .profile-card,
+  .auth-options {
+    width: 100%;
+    max-width: none;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .profile-avatar {
+    width: 70px;
+    height: 70px;
+    font-size: 22px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 80px; /* deja espacio para la navbar fija */
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    font-size: 0.95rem;
+  }
+
+  .logout-button {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .auth-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .auth-button {
+    width: 100%;
+  }
+}

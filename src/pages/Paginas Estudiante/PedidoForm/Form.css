@@ -105,3 +105,38 @@ input[type="file"]::file-selector-button:hover {
 input[type="file"]::file-selector-button:active {
   background-color: #3e8e41; /* Verde más oscuro al hacer clic */
 }
+
+@media (max-width: 480px) {
+  .form-container {
+    width: 90%;
+    padding: 1.5rem;
+    margin: 100px auto 60px auto;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  label {
+    font-size: 0.95rem;
+  }
+
+  input[type="text"],
+  select,
+  input[type="file"] {
+    font-size: 0.95rem;
+    padding: 0.65rem;
+  }
+
+  input[type="file"]::file-selector-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 0.9rem;
+  }
+}
