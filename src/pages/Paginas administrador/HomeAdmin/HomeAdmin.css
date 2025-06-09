@@ -18,12 +18,12 @@
     font-weight: 700;
     color: #4C2400; 
     text-align: center;
-    margin-bottom: 20px; /* Espaciado debajo del título */
+    margin-bottom: 20px; 
 }
 
-/* Botón de publicar */
+
 .publish-button {
-    background-color: #7D4230; /* Marrón oscuro */
+    background-color: #7D4230; 
     color: white;
     border: none;
     padding: 10px 20px;
