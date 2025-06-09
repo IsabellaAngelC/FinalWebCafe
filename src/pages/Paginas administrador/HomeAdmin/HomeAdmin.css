@@ -55,10 +55,10 @@
     margin-top: 20px;
 }
 
-/* Tarjeta de cada publicación */
+
 .menu-post {
-    background-color: #ffffff; /* Fondo blanco */
-    border: 1px solid #ddd; /* Borde gris claro */
+    background-color: #ffffff; 
+    border: 1px solid #ddd; 
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
     padding: 20px;
