@@ -72,8 +72,8 @@ p {
     object-fit: cover;
     border-radius: 8px; 
     margin-top: 10px;
-    border: 2px solid #e0e0e0; /* Borde para destacar la imagen */
-    align-self: center; /* Centra la imagen */
+    border: 2px solid #e0e0e0; 
+    align-self: center; 
 }
 
 h1 {
