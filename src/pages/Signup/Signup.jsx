@@ -73,7 +73,7 @@ const Signup = () => {
 
         {error && <p className="error-message">{error}</p>}
 
-        <button type="submit" className="signup-button">Sign Up</button>
+        <button type="submit" className="signup-button">Registrarse</button>
 
         <p className="si-account">
           ¿Ya tienes cuenta?{' '}
