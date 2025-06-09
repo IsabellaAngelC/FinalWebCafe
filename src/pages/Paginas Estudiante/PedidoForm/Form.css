@@ -93,17 +93,17 @@ input[type="file"]::file-selector-button {
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 8px; /* Bordes redondeados */
+  border-radius: 8px; 
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 input[type="file"]::file-selector-button:hover {
-  background-color: #45a049; /* Verde más oscuro */
+  background-color: #45a049; 
 }
 
 input[type="file"]::file-selector-button:active {
-  background-color: #3e8e41; /* Verde más oscuro al hacer clic */
+  background-color: #3e8e41; 
 }
 
 @media (max-width: 480px) {
