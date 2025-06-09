@@ -105,13 +105,13 @@ span {
     font-size: 1rem;
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    width: 100%; /* Botón ocupa todo el ancho */
+    width: 100%; 
     text-align: center;
 }
 
 .logout-button:hover {
-    background-color: #7E4639; /* Marrón más oscuro */
-    transform: translateY(-2px); /* Eleva el botón al pasar el mouse */
+    background-color: #7E4639; 
+    transform: translateY(-2px); 
 }
 
 
