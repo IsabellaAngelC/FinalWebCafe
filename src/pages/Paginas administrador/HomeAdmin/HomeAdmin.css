@@ -41,11 +41,11 @@
 }
 
 .publish-button:active {
-    background-color: #7D4230; /* Marrón más oscuro */
-    transform: translateY(0); /* Restaura la posición */
+    background-color: #7D4230; 
+    transform: translateY(0); 
 }
 
-/* Contenedor de publicaciones */
+
 .menu-posts {
     display: flex;
     flex-wrap: wrap; /* Permite que las tarjetas se ajusten automáticamente */
