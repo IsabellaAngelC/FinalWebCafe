@@ -7,8 +7,13 @@ body {
 
 .signup-wrapper {
   display: flex;
-  height: 100vh;
   width: 100%;
+  max-width: 1000px;
+  margin: 4rem auto; /* Espacio arriba y abajo */
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .signup-left {
@@ -105,6 +110,7 @@ body {
   text-align: center;
   font-size: 0.9rem;
   color: #4c2400;
+  margin-bottom: 25px;
 }
 
 .login-link span {
