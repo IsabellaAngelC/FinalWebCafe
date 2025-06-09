@@ -41,53 +41,57 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
-  <form className="login-form" onSubmit={handleSubmit}>
-    <h1>Iniciar Sesión</h1>
+    <div className="signup-wrapper">
+      <div className="signup-left">
+        <img
+          src="https://images.unsplash.com/photo-1580584126903-c17d4183043b?auto=format&fit=crop&w=600&q=80"
+          alt="Login visual"
+        />
+        <div className="signup-caption">
+          <h3>¡Bienvenido de nuevo!</h3>
+          <p>Ingresa y sigue disfrutando de nuestro delicioso café.</p>
+        </div>
+      </div>
 
-    <div className="form-group">
-      <input
-        type="email"
-        placeholder="Ingresa tu email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
+      <div className="signup-right">
+        <form className="signup-form" onSubmit={handleSubmit}>
+          <h1>Iniciar sesión</h1>
+          <input
+            type="email"
+            placeholder="Correo institucional"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Contraseña"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <input
+              type="checkbox"
+              id="remember"
+              checked={rememberMe}
+              onChange={(e) => setRememberMe(e.target.checked)}
+            />
+            <label htmlFor="remember">Recordarme</label>
+          </div>
+
+          {error && <p className="error-message">{error}</p>}
+
+          <button type="submit" className="signup-button">Entrar</button>
+
+          <p className="login-link">
+            ¿No tienes cuenta?{' '}
+            <span onClick={() => navigate('/signup')}>Regístrate</span>
+          </p>
+        </form>
+      </div>
     </div>
-
-    <div className="form-group">
-      <input
-        type="password"
-        placeholder="Ingresa tu contraseña"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      />
-    </div>
-
-    <div className="remember-me">
-      <input
-        type="checkbox"
-        id="remember"
-        checked={rememberMe}
-        onChange={(e) => setRememberMe(e.target.checked)}
-      />
-      <label htmlFor="remember">Recuerdame</label>
-    </div>
-
-    {error && <p className="error-message">{error}</p>}
-
-    <button type="submit" className="login-button">Login</button>
-
-    <p className="no-account">
-      ¿No tienes cuenta?{' '}
-      <span className="signup-link" onClick={() => navigate('/signup')}>
-        Regístrate ahora
-      </span>
-    </p>
-  </form>
-</div>
-
   );
 };
 
