@@ -44,12 +44,12 @@ const Login = () => {
     <div className="signup-wrapper">
       <div className="signup-left">
         <img
-          src="https://images.unsplash.com/photo-1580584126903-c17d4183043b?auto=format&fit=crop&w=600&q=80"
+          src="https://valledellili.org/wp-content/uploads/2018/04/icesi-cover.jpg"
           alt="Login visual"
         />
         <div className="signup-caption">
           <h3>¡Bienvenido de nuevo!</h3>
-          <p>Ingresa y sigue disfrutando de nuestro delicioso café.</p>
+          <p>Ingresa y sigue disfrutando de tus cafeterías a un click de distancia.</p>
         </div>
       </div>
 
