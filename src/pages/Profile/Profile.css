@@ -123,10 +123,10 @@ span {
     font-size: 1.5rem;
 }
 
-/* Opciones de autenticación */
+
 .auth-options {
     text-align: center;
-    max-width: 300px; /* Reduce aún más el ancho */
+    max-width: 300px; 
     margin: 0 auto;
     margin-top: 40px;
     padding: 20px;
