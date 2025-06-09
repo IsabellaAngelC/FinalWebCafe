@@ -32,7 +32,7 @@ const Signup = () => {
     <div className="signup-wrapper">
       <div className="signup-left">
         <img
-          src="https://images.unsplash.com/photo-1510626176961-4bfb7d1fc6b0?auto=format&fit=crop&w=600&q=80"
+          src="https://valledellili.org/wp-content/uploads/2018/04/icesi-cover.jpg"
           alt="Signup visual"
         />
         <div className="signup-caption">
