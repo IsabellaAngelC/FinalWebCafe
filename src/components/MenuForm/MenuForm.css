@@ -40,3 +40,29 @@
   background-color: #5a2600;
   transform: translateY(0); /* Restaura la posición */
 }
+
+@media (max-width: 480px) {
+  .menu-form {
+    width: 90%;
+    max-width: none;
+    padding: 15px;
+    margin: 20px auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .menu-form h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .menu-form input,
+  .menu-form textarea {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .menu-form button {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
