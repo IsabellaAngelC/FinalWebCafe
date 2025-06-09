@@ -1,7 +1,7 @@
-/* Botones de estado en el componente Solicitudes */
+
 .estado-buttons {
     display: flex;
-    gap: 10px; /* Espaciado entre los botones */
+    gap: 10px; 
     justify-content: flex-start; /* Alinea los botones al inicio */
 }
 
