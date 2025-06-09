@@ -10,13 +10,13 @@
     font-weight: 400;
 }
 
-/* Fondo general para destacar la tarjeta */
+
 body {
-    background-color: #f4f4f4; /* Fondo claro */
+    background-color: #f4f4f4; 
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
     margin: 0;
 }
 
