@@ -83,25 +83,25 @@
     margin-bottom: 10px;
 }
 
-/* Texto de la publicación */
+
 .menu-post p {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 14px;
-    color: #666; /* Gris claro */
+    color: #666; 
     margin: 5px 0;
     line-height: 1.5;
 }
 
-/* Botón de acción dentro de la tarjeta */
+
 .action-button {
-    background-color: #713001; /* Marrón oscuro */
+    background-color: #713001; 
     color: white;
     border: none;
     padding: 8px 15px;
     font-size: 14px;
     font-weight: 600;
-    border-radius: 6px; /* Bordes redondeados */
+    border-radius: 6px; 
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     align-self: flex-start; /* Alinea el botón al inicio */
