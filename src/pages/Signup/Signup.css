@@ -125,7 +125,7 @@ body {
   color: #103daf;
 }
 
-/* Responsivo */
+
 @media (max-width: 768px) {
   .signup-wrapper {
     flex-direction: column;
