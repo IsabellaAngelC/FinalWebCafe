@@ -36,8 +36,8 @@ const Signup = () => {
           alt="Signup visual"
         />
         <div className="signup-caption">
-          <h3>¡Únete a nuestra cafetería!</h3>
-          <p>Disfruta del mejor café universitario todos los días.</p>
+          <h3>¡Únete a Break&Bites!</h3>
+          <p>Disfruta de tener tu almuerzo a la mano todos los días.</p>
         </div>
       </div>
 
