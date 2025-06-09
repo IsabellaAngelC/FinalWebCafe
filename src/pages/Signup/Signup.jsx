@@ -19,39 +19,38 @@ const Signup = () => {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      await updateProfile(user, {
-        displayName: username,
-      });
-
-      await setDoc(doc(db, 'users', user.uid), {
-        uid: user.uid,
-        email: email,
-        username: username,
-      });
+      await updateProfile(user, { displayName: username });
+      await setDoc(doc(db, 'users', user.uid), { uid: user.uid, email, username });
 
       navigate('/');
     } catch (err) {
-      console.error('Error al registrar usuario:', err.message);
       setError(err.message);
     }
   };
 
   return (
-    <div className="signup-container">
-      <form className="signup-form" onSubmit={handleSubmit}>
-        <h1>Registrarse</h1>
+    <div className="signup-wrapper">
+      <div className="signup-left">
+        <img
+          src="https://images.unsplash.com/photo-1510626176961-4bfb7d1fc6b0?auto=format&fit=crop&w=600&q=80"
+          alt="Signup visual"
+        />
+        <div className="signup-caption">
+          <h3>¡Únete a nuestra cafetería!</h3>
+          <p>Disfruta del mejor café universitario todos los días.</p>
+        </div>
+      </div>
 
-        <div className="form-group">
+      <div className="signup-right">
+        <form className="signup-form" onSubmit={handleSubmit}>
+          <h1>Crear cuenta</h1>
           <input
             type="email"
-            placeholder="Ingresa tu email"
+            placeholder="Correo institucional"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-        </div>
-
-        <div className="form-group">
           <input
             type="text"
             placeholder="Nombre de usuario"
@@ -59,27 +58,18 @@ const Signup = () => {
             onChange={(e) => setUsername(e.target.value)}
             required
           />
-        </div>
-
-        <div className="form-group">
           <input
             type="password"
-            placeholder="Ingresa tu contraseña"
+            placeholder="Contraseña"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-        </div>
-
-        {error && <p className="error-message">{error}</p>}
-
-        <button type="submit" className="signup-button">Registrarse</button>
-
-        <p className="si-account">
-          ¿Ya tienes cuenta?{' '}
-          <span className="login-link" onClick={() => navigate('/')}>Inicia Sesión</span>
-        </p>
-      </form>
+          {error && <p className="error-message">{error}</p>}
+          <button type="submit" className="signup-button">Registrarme</button>
+          <p className="login-link">¿Ya tienes cuenta? <span onClick={() => navigate('/')}>Inicia sesión</span></p>
+        </form>
+      </div>
     </div>
   );
 };

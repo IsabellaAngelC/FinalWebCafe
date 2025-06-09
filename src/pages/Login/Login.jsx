@@ -72,7 +72,7 @@ const Login = () => {
         checked={rememberMe}
         onChange={(e) => setRememberMe(e.target.checked)}
       />
-      <label htmlFor="remember">Remember me</label>
+      <label htmlFor="remember">Recuerdame</label>
     </div>
 
     {error && <p className="error-message">{error}</p>}
