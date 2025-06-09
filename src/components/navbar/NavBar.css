@@ -5,8 +5,8 @@
   top: 0;
   left: 0;
   width: 100%; 
-  height: 60px; /* Altura fija */
-  z-index: 1000; /* Asegura que esté por encima del contenido */
+  height: 60px; 
+  z-index: 1000; 
   display: flex; /* Flexbox para alinear contenido */
   justify-content: space-between; /* Espaciado entre logo y enlaces */
   align-items: center; /* Centra verticalmente los elementos */
