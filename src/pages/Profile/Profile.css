@@ -1,11 +1,11 @@
-/* Contenedor principal del perfil */
+
 .profile-container {
-    max-width: 360px; /* Ancho máximo de la tarjeta */
-    width: 100%; /* Asegura que ocupe todo el ancho disponible dentro del contenedor */
+    max-width: 360px; 
+    width: 100%; 
     padding: 20px;
-    background: #ffffff; /* Fondo blanco */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
 }
