@@ -1,4 +1,4 @@
-/* Contenedor principal */
+
 .home-admin-container {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -8,8 +8,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background-color: #f4f4f4; /* Fondo claro */
-    min-height: 100vh; /* Asegura que el contenedor cubra toda la pantalla */
+    background-color: #f4f4f4; 
+    min-height: 100vh; 
 }
 
 /* Título de publicaciones */
