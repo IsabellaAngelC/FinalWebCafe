@@ -29,17 +29,17 @@ h1 {
 }
 
 h2 {
-    color: #393939; /* Gris oscuro */
+    color: #393939; 
     font-size: 1.2rem;
     margin-bottom: 10px;
     text-align: center;
 }
 
 span {
-    color: #7E4639; /* Marrón claro */
+    color: #7E4639; 
 }
 
-/* Tarjeta del perfil */
+
 .profile-card {
     background: #ffffff;
     border-radius: 10px;
@@ -49,8 +49,8 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px; /* Espaciado entre elementos */
-    width: 100%; /* Asegura que ocupe todo el ancho disponible dentro del contenedor */
+    gap: 15px; 
+    width: 100%; 
 }
 
 
