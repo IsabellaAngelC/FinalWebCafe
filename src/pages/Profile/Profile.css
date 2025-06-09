@@ -53,12 +53,12 @@ span {
     width: 100%; /* Asegura que ocupe todo el ancho disponible dentro del contenedor */
 }
 
-/* Avatar del perfil */
+
 .profile-avatar {
     width: 80px;
     height: 80px;
-    background-color: #B38D80; /* Marrón oscuro */
-    color: #ffffff; /* Texto blanco */
+    background-color: #B38D80; 
+    color: #ffffff; 
     border-radius: 50%; 
     display: flex;
     align-items: center;
