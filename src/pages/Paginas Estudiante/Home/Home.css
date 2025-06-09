@@ -78,3 +78,36 @@ body {
 .buy-button:hover {
     background-color: #45a049; 
 }
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 10px;
+    margin-top: 50px;
+  }
+
+  .cafeterias {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .menu-card {
+    width: 100%; 
+    max-width: 95%; 
+    padding: 15px;
+  }
+
+  .menu-card h3 {
+    font-size: 18px;
+  }
+
+  .menu-card p {
+    font-size: 13px;
+  }
+
+  .buy-button {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
