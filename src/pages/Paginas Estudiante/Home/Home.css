@@ -2,7 +2,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     background-color: #f4f4f4;
-    color: #333; /* Cambia el color del texto a un tono oscuro */
+    color: #333; 
     margin: 0;
     padding: 0;
 }
@@ -15,12 +15,12 @@ body {
     margin-top: 60px;
     min-height: 100vh;
     padding: 20px;
-    background-color: #f9f9f9; /* Fondo claro */
+    background-color: #f9f9f9; 
 }
 
 .cafeterias {
     display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas se ajusten automáticamente */
+    flex-wrap: wrap; 
     gap: 20px; /* Espaciado entre las tarjetas */
     justify-content: center;
     width: 100%;
