@@ -20,9 +20,9 @@ body {
     margin: 0;
 }
 
-/* Títulos */
+
 h1 {
-    color: #7E4639; /* Marrón oscuro */
+    color: #7E4639; 
     font-size: 1.8rem;
     text-align: center;
     margin-bottom: 20px;
