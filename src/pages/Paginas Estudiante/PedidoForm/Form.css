@@ -74,12 +74,12 @@ button {
 }
 
 button:hover {
-  background-color: #45a049; /* Verde más oscuro */
-  transform: translateY(-2px); /* Eleva el botón al pasar el mouse */
+  background-color: #45a049; 
+  transform: translateY(-2px); 
 }
 
 button:active {
-  background-color: #3e8e41; /* Verde más oscuro al hacer clic */
+  background-color: #3e8e41; 
   transform: translateY(0); /* Restaura la posición */
 }
 
