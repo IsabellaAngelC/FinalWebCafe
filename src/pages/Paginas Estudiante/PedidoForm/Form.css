@@ -38,15 +38,15 @@ label {
   display: flex;
   flex-direction: column;
   font-size: 1rem;
-  color: #4a4a4a; /* Gris oscuro */
+  color: #4a4a4a; 
 }
 
 input[type="text"],
 select,
 input[type="file"] {
   padding: 0.75rem;
-  border: 1px solid #e0e0e0; /* Borde gris claro */
-  border-radius: 8px; /* Bordes redondeados */
+  border: 1px solid #e0e0e0; 
+  border-radius: 8px; 
   background-color: #fdfdfd; /* Fondo blanco */
   font-size: 1rem;
   color: #4a4a4a; /* Gris oscuro */
