@@ -25,20 +25,20 @@ p {
     margin-bottom: 80px;
 }
 
-/* Estilo para cada pedido */
+
 .pedido-item {
-    background-color: #ffffff; /* Fondo blanco */
-    border: 1px solid #e0e0e0; /* Borde gris claro */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #ffffff; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     padding: 20px;
     margin-bottom: 20px;
     width: 80%;
-    max-width: 600px; /* Ancho máximo para las tarjetas */
+    max-width: 600px; 
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Espaciado entre los elementos */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animación al pasar el mouse */
+    gap: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
 }
 
 .pedido-item:hover {
