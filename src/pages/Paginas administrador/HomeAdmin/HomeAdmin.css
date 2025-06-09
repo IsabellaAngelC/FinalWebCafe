@@ -48,9 +48,9 @@
 
 .menu-posts {
     display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas se ajusten automáticamente */
-    gap: 20px; /* Espaciado entre las tarjetas */
-    justify-content: center; /* Centra las tarjetas horizontalmente */
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
     width: 100%;
     margin-top: 20px;
 }
