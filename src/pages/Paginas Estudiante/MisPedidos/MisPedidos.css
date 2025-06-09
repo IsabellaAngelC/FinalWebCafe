@@ -8,7 +8,7 @@ p {
     padding: 0;
 }
 
-/* Contenedor principal de los pedidos */
+
 .pedidos-container {
     display: flex;
     flex-direction: column;
@@ -17,8 +17,8 @@ p {
     width: 100%;
     max-width: 1200px;
     padding: 20px;
-    background-color: #E6D4C8; /* Fondo claro */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #E6D4C8; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     border-radius: 8px; /* Bordes redondeados */
     margin: 20px auto;
     margin-top: 20px; /* Centra el contenedor */
