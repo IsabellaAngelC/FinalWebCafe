@@ -59,14 +59,14 @@
 .menu-post {
     background-color: #ffffff; 
     border: 1px solid #ddd; 
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     padding: 20px;
-    width: 300px; /* Ancho fijo para las tarjetas */
+    width: 300px; 
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Espaciado entre los elementos */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animación al pasar el mouse */
+    gap: 10px; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
 }
 
 .menu-post:hover {
