@@ -7,7 +7,7 @@
   width: 100%; 
   height: 60px; 
   z-index: 1000; 
-  display: flex; /* Flexbox para alinear contenido */
+  display: flex; 
   justify-content: space-between; /* Espaciado entre logo y enlaces */
   align-items: center; /* Centra verticalmente los elementos */
   padding: 0 20px; /* Espaciado interno */
