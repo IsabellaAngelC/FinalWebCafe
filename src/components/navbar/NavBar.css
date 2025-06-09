@@ -27,7 +27,7 @@
 }
 
 .navbar-logo {
-  display: flex; /* Asegura que el logo esté alineado horizontalmente */
+  display: flex; 
   align-items: center;/* Centra verticalmente el logo */
 }
 
