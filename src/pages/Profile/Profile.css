@@ -114,7 +114,7 @@ span {
     transform: translateY(-2px); /* Eleva el botón al pasar el mouse */
 }
 
-/* Mensaje cuando no está logueado */
+
 .not-logged-title {
     color: #7E4639;
     text-align: center;
