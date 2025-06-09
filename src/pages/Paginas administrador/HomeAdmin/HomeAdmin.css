@@ -36,8 +36,8 @@
 }
 
 .publish-button:hover {
-    background-color: #482e23; /* Marrón más claro */
-    transform: translateY(-2px); /* Eleva el botón al pasar el mouse */
+    background-color: #482e23; 
+    transform: translateY(-2px);
 }
 
 .publish-button:active {
