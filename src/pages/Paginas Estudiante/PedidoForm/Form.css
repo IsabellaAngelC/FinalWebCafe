@@ -57,16 +57,16 @@ input[type="text"]:focus,
 select:focus,
 input[type="file"]:focus {
   outline: none;
-  border-color: #a67c52; /* Marrón intermedio */
-  box-shadow: 0 0 4px rgba(166, 124, 82, 0.5); /* Sombra al enfocar */
+  border-color: #a67c52; 
+  box-shadow: 0 0 4px rgba(166, 124, 82, 0.5); 
 }
 
 button {
   padding: 0.75rem;
-  background-color: #4CAF50; /* Verde para el botón */
-  color: #fff; /* Blanco */
+  background-color: #4CAF50; 
+  color: #fff; 
   border: none;
-  border-radius: 8px; /* Bordes redondeados */
+  border-radius: 8px; 
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
