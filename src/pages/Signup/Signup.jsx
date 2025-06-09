@@ -77,7 +77,7 @@ const Signup = () => {
 
         <p className="si-account">
           ¿Ya tienes cuenta?{' '}
-          <span className="login-link" onClick={() => navigate('/')}>Login now</span>
+          <span className="login-link" onClick={() => navigate('/')}>Ingresa Ahora</span>
         </p>
       </form>
     </div>
