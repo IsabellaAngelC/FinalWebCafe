@@ -80,7 +80,7 @@ button:hover {
 
 button:active {
   background-color: #3e8e41; 
-  transform: translateY(0); /* Restaura la posición */
+  transform: translateY(0); 
 }
 
 input[type="file"] {
@@ -89,8 +89,8 @@ input[type="file"] {
 }
 
 input[type="file"]::file-selector-button {
-  background-color: #4CAF50; /* Verde para el botón */
-  color: #fff; /* Blanco */
+  background-color: #4CAF50; 
+  color: #fff;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 8px; /* Bordes redondeados */
