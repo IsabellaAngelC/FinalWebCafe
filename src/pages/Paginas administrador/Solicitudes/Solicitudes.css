@@ -27,3 +27,51 @@
     transform: translateY(0); /* Restaura la posición */
 }
 
+/* Estilos responsive para Solicitudes */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .pedidos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .pedido-item {
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-size: 0.9rem;
+  }
+
+  .pedido-imagen {
+    width: 100%;
+    height: auto;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+  }
+
+  .estado-buttons {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 1rem;
+  }
+
+  .estado-buttons button {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 80px; /* deja espacio para la navbar fija */
+  }
+
+  .pedido-item h2 {
+    font-size: 1.2rem;
+  }
+}
