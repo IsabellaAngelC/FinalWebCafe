@@ -62,7 +62,7 @@ body {
 }
 
 .buy-button {
-    background-color: #4CAF50; /* Verde para el botón */
+    background-color: #4CAF50; 
     color: white;
     border: none;
     border-radius: 4px;
@@ -70,11 +70,11 @@ body {
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    align-self: stretch; /* Hace que el botón ocupe todo el ancho */
+    align-self: stretch; 
     text-align: center;
     transition: background-color 0.2s ease;
 }
 
 .buy-button:hover {
-    background-color: #45a049; /* Color más oscuro al pasar el mouse */
+    background-color: #45a049; 
 }
