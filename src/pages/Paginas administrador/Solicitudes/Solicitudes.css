@@ -18,16 +18,16 @@
 }
 
 .estado-buttons button:hover {
-    background-color: #925a1a; /* Marrón más claro */
-    transform: translateY(-2px); /* Eleva el botón al pasar el mouse */
+    background-color: #925a1a; 
+    transform: translateY(-2px); 
 }
 
 .estado-buttons button:active {
-    background-color: #5a2600; /* Marrón más oscuro */
-    transform: translateY(0); /* Restaura la posición */
+    background-color: #5a2600; 
+    transform: translateY(0); /
 }
 
-/* Estilos responsive para Solicitudes */
+
 @media (max-width: 768px) {
   .container {
     padding: 1rem;
@@ -68,7 +68,7 @@
   h1 {
     font-size: 1.5rem;
     text-align: center;
-    margin-top: 80px; /* deja espacio para la navbar fija */
+    margin-top: 80px; /
   }
 
   .pedido-item h2 {
