@@ -38,11 +38,11 @@
 }
 
 .navbar-links {
-  display: flex; /* Flexbox para los enlaces */
-  flex-direction: row; /* Asegura que los enlaces estén en una fila horizontal */
-  gap: 25px; /* Espaciado entre enlaces */
+  display: flex; 
+  flex-direction: row; 
+  gap: 25px; 
   align-items: center;
-  margin-left: auto; /* Centra verticalmente los enlaces */
+  margin-left: auto; 
 }
 
 .navbar-links a {
