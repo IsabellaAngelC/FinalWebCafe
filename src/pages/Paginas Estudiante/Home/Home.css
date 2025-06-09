@@ -21,7 +21,7 @@ body {
 .cafeterias {
     display: flex;
     flex-wrap: wrap; 
-    gap: 20px; /* Espaciado entre las tarjetas */
+    gap: 20px; 
     justify-content: center;
     width: 100%;
     max-width: 1200px;
@@ -29,8 +29,8 @@ body {
 }
 
 .menu-card {
-    background-color: #ffffff; /* Fondo blanco para las tarjetas */
-    border: 1px solid #e0e0e0; /* Borde gris claro */
+    background-color: #ffffff; 
+    border: 1px solid #e0e0e0; 
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
     padding: 20px;
