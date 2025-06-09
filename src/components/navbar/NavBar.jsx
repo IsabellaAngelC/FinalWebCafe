@@ -1,4 +1,5 @@
 import './NavBar.css';
+import { FaHome, FaClipboardList, FaQuestionCircle, FaUserCircle } from 'react-icons/fa';
 import Logo from '../../assets/LogoBites.png';
 import { useEffect, useState } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
@@ -23,19 +24,28 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <img src={Logo} alt="Bites Logo" />
-        </div>
+      <img src={Logo} alt="Bites Logo" />
+    </div>
 
         <div className="navbar-links">
-          
-          <a href={isAdmin ? '/home-admin' : '/home'}>Home</a>
-          
-          <a href={isAdmin ? '/solicitudes' : '/mispedidos'}>
-            {isAdmin ? 'Solicitudes' : 'Mis pedidos'}
-          </a>
-          <a href="https://www.icesi.edu.co/servicios/contactenos/">Ayuda</a>
-          <a href="/profile">Mi perfil</a>
-        </div>
+  <a href={isAdmin ? '/home-admin' : '/home'}>
+    <FaHome className="navbar-icon" /> Home
+  </a>
+
+  <a href={isAdmin ? '/solicitudes' : '/mispedidos'}>
+    <FaClipboardList className="navbar-icon" />
+    {isAdmin ? 'Solicitudes' : 'Mis pedidos'}
+  </a>
+
+  <a href="https://www.icesi.edu.co/servicios/contactenos/" target="_blank" rel="noopener noreferrer">
+    <FaQuestionCircle className="navbar-icon" /> Ayuda
+  </a>
+
+  <a href="/profile">
+    <FaUserCircle className="navbar-icon" /> Mi perfil
+  </a>
+</div>
+
       </div>
     </nav>
   );
