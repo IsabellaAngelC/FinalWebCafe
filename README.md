@@ -1,12 +1,11 @@
-# React + Vite
+In university life, time is precious (and so is coffee). However, students often don’t know what's available in the cafeteria or waste time waiting in lines just to ask. At the same time, administrators struggle with organizing custom requests and managing daily menus.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bites was created to improve the relationship between students and cafeterias through a responsive web platform. It provides a clear user experience for both students and administrators, allowing each to interact with cafeteria services efficiently and visually.
+Break&Bites App was born from a simple but impactful mission:
+To streamline and improve the daily experience between university students and their campus cafeterias.
 
-Currently, two official plugins are available:
+We believe that food services in academic environments deserve the same level of efficiency and care as any modern digital platform. With Bites, students can view menus and make requests easily, while administrators can organize and respond to orders with clarity and control.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project combines thoughtful design, responsive web development, and real user needs to create a platform where simplicity, warmth, and functionality meet — all while reflecting the daily rhythm of university life.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Built with React, Firebase, and pure CSS, Bites is more than just an academic exercise — it’s a practical solution to a real-world problem, built to grow, adapt, and serve.
