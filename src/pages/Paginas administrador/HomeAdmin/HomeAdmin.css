@@ -70,16 +70,16 @@
 }
 
 .menu-post:hover {
-    transform: translateY(-5px); /* Eleva la tarjeta al pasar el mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
-/* Título de la publicación */
+
 .menu-post h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 18px;
-    color: #4a4a4a; /* Gris oscuro */
+    color: #4a4a4a; 
     margin-bottom: 10px;
 }
 
