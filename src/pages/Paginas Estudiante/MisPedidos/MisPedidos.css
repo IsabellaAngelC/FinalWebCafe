@@ -55,22 +55,22 @@ p {
     margin-bottom: 10px;
 }
 
-/* Texto de los detalles del pedido */
+
 .pedido-item p {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 14px;
-    color: #666; /* Gris claro */
+    color: #666; 
     margin: 5px 0;
 }
 
-/* Imagen del comprobante */
+
 .pedido-imagen {
     width: 100%;
-    max-width: 150px; /* Tamaño máximo de la imagen */
+    max-width: 150px; 
     height: auto;
     object-fit: cover;
-    border-radius: 8px; /* Bordes redondeados */
+    border-radius: 8px; 
     margin-top: 10px;
     border: 2px solid #e0e0e0; /* Borde para destacar la imagen */
     align-self: center; /* Centra la imagen */
