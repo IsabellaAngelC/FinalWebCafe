@@ -38,7 +38,7 @@
 
 .menu-form button:active {
   background-color: #5a2600;
-  transform: translateY(0); /* Restaura la posición */
+  transform: translateY(0); 
 }
 
 @media (max-width: 480px) {
