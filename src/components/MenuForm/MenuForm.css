@@ -6,8 +6,8 @@
   gap: 10px;
   margin: 20px auto; 
   max-width: 400px; 
-  padding: 20px; /* Agrega espacio interno */
-  background-color: #ffffff; /* Fondo blanco */
+  padding: 20px; 
+  background-color: #ffffff; 
   border-radius: 8px; /* Bordes redondeados */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
