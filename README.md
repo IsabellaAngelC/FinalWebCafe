@@ -1,3 +1,5 @@
+About Break&Bites
+
 In university life, time is precious (and so is coffee). However, students often don’t know what's available in the cafeteria or waste time waiting in lines just to ask. At the same time, administrators struggle with organizing custom requests and managing daily menus.
 
 Bites was created to improve the relationship between students and cafeterias through a responsive web platform. It provides a clear user experience for both students and administrators, allowing each to interact with cafeteria services efficiently and visually.
